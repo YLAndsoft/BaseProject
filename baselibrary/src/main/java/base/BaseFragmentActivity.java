@@ -17,12 +17,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.y.s.y.y.R;
 
 import java.util.List;
 
-import wp.ys.point.com.ysyy.ui.constant.Constant;
-import wp.ys.point.com.ysyy.ui.widget.SystemBarTintManager;
+import constant.Constant;
+import pro.base.com.baselibrary.R;
+import widget.SystemBarTintManager;
 
 
 /**

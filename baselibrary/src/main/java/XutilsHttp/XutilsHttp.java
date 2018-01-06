@@ -2,6 +2,7 @@ package XutilsHttp;
 
 import android.util.ArrayMap;
 
+
 import org.xutils.common.Callback;
 import org.xutils.ex.HttpException;
 import org.xutils.http.HttpMethod;
@@ -9,6 +10,8 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import java.util.Map;
+
+
 
 /**
  * Created by DN on 2017/12/8.
