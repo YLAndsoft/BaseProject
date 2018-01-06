@@ -33,3 +33,24 @@
   Utils.init(this);<br>
   ClipUtils.init(this);<br>
   否则在使用过程中会出现空指针异常；<br>
+ 
+
+使用：
+========
+Add it in your root build.gradle at the end of repositories:<br>
+```java
+ maven { url 'https://jitpack.io' }
+ compile 'com.github.YLAndsoft:BaseProject:v1.2'
+```
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
