@@ -33,8 +33,7 @@ public class Constant {
     public static final  int  PERMISSION_CODE = 100;
     public static final  int  REQUEST_CODE_SETTING = 100;
 
-    public static final  String COLLECTION_ACTION = "clickCollection";
-    public static final  String DOWNLOAD_ACTION = "downloadCollection";
+
 
     //保存地址
     public  static  final  String clearImagePath = Environment.getExternalStorageDirectory().getAbsolutePath()+ File.separator + "360wallpaper";

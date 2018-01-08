@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="system_bar_color">#3F51B5</color>
+    <color name="white">#ffffffff</color>
+    <color name="gary">#EBEAE8</color>
+    <!-- 主色 按住蓝 -->
+    <color name="maintab_topbar_bg_color">#18131A</color>
+
 </resources>

@@ -19,23 +19,26 @@ import constant.Constant;
 import widget.SystemBarTintManager;
 
 /**
+ * 说明：继承此activity，必须在继承者的布局文件父节点中添加属性：
+ *  android:fitsSystemWindows="true"
+ *  否则会出现布局显示不全，顶部会往上移动一点
  * Created by DN on 2017/7/22.
  */
 
 public abstract class BaseActivity extends Activity implements View.OnClickListener{
-    /** 是否沉浸状�?�栏**/
+    /** 是否沉浸状态栏**/
     private boolean isSetStatusBar = true;
     /** 是否允许全屏 **/
     private boolean mAllowFullScreen = true;
     /** 是否禁止旋转屏幕 **/
     private boolean isAllowScreenRoate = false;
-    /** 是否设置状�?�栏颜色*/
+    /** 是否设置状态栏颜色*/
     private boolean isSetActionBarColor = true;
     /** 当前Activity渲染的视图View **/
     protected View mContextView = null;
     /** 日志输出标志 **/
     protected final String TAG = this.getClass().getSimpleName();
-    /**上下�?*/
+    /**上文*/
     protected Context mContext;
     private int mResColor;
 
@@ -237,7 +240,7 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
     }
 
     /**
-     * [是否设置沉浸状�?�栏]
+     * [是否设置沉浸状态栏]
      *
      * @param isSetStatusBar
      */
