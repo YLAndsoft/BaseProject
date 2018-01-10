@@ -4,14 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 import base.BaseActivity;
-import pro.base.com.baseproject.demo1.DemoActivity;
+import pro.base.com.baseproject.demo1.fragment.DemoActivity;
 
 public class MainActivity extends BaseActivity {
     @ViewInject(value = R.id.textView)

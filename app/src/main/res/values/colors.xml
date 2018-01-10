@@ -9,4 +9,10 @@
     <!-- 主色 按住蓝 -->
     <color name="maintab_topbar_bg_color">#18131A</color>
 
+
+    <color name="transparent">#00000000</color>
+
+    <color name="activity_bg_white">#ffffffff</color>
+    <color name="text_black_light">#ff5c5e61</color>
+    <color name="background_tab_pressed">#00000000</color>
 </resources>

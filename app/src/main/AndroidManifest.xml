@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name = "pro.base.com.baseproject.demo1.DemoActivity"
+        <activity android:name = ".demo1.fragment.DemoActivity"
             android:screenOrientation="portrait"/>
 
 
