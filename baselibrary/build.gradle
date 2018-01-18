@@ -31,4 +31,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.google.code.gson:gson:2.8.2'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.baidu.mobstat:mtj-sdk:latest.integration'
 }

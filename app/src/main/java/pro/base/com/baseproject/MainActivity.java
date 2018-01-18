@@ -9,15 +9,21 @@ import android.widget.TextView;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import base.BaseActivity;
+import fyl.base.BaseActivity;
+import fyl.base.f;
+import pro.base.com.baseproject.dbDemo.DBTestActivity;
 import pro.base.com.baseproject.demo1.fragment.DemoActivity;
 
 public class MainActivity extends BaseActivity {
-    @ViewInject(value = R.id.textView)
-    private TextView mText;
+
+    @ViewInject(value = R.id.textView1)
+    private TextView mText1;
+    @ViewInject(value = R.id.textView2)
+    private TextView mText2;
     private String[] demoName = Constant.DEMO_NAME;
     @Override
     public void initParms(Bundle parms) {
+
         //此属性设置与状态栏相关
         setAllowFullScreen(true);//是否允许全屏
         setScreenRoate(false);//是否允许屏幕旋转
@@ -43,7 +49,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setListener() {
-        mText.setOnClickListener(this);//绑定监听事件
+        mText1.setOnClickListener(this);//绑定监听事件
+        mText2.setOnClickListener(this);
     }
 
     @Override
@@ -54,8 +61,11 @@ public class MainActivity extends BaseActivity {
     @Override
     public void widgetClick(View v) {
         switch (v.getId()){
-            case R.id.textView:
+            case R.id.textView1:
                 startActivity(new Intent(mContext,DemoActivity.class));
+                break;
+            case R.id.textView2:
+                startActivity(new Intent(mContext,DBTestActivity.class));
                 break;
         }
 

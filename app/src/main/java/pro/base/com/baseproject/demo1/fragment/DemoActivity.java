@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import base.MenuFragmentActivity;
+import fyl.base.MenuFragmentActivity;
 import pro.base.com.baseproject.R;
 
 /**
@@ -48,6 +48,8 @@ public class DemoActivity extends MenuFragmentActivity {
 
     @Override
     public View bindView() {
+        //View view = LayoutInflater.from(mContext).inflate(R.layout.demo_activity, null);
+        //return view;
         return null;
     }
 
