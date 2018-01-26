@@ -4,4 +4,30 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="system_bar_color">#3F51B5</color>
+
+    <color name="white">#ffffff</color>
+    <!-- 覆盖颜色 -->
+    <color name="bgColor_overlay_black">#95000000</color>
+    <!-- 窗口背景颜色 -->
+    <color name="bgColor_svprogressdefaultview">@color/white</color>
+    <!-- 标题颜色 -->
+    <color name="textColor_svprogresshuddefault_msg">#000000</color>
+    <color name="roundColor_svprogresshuddefault">#e5e5e5</color>
+    <color name="roundProgressColor_svprogresshuddefault">@color/white</color>
+    <!-- 覆盖颜色 -->
+    <color name="bgColor_overlay">#60000000</color>
+    <!-- 窗口背景颜色 -->
+    <color name="bgColor_alertview_alert">#f8f8f8</color>
+    <!-- 标题颜色 -->
+    <color name="textColor_alert_title">#000000</color>
+    <color name="textColor_actionsheet_title">#8f8f8f</color>
+    <!-- 消息颜色 -->
+    <color name="textColor_alert_msg">#000000</color>
+    <color name="textColor_actionsheet_msg">#8f8f8f</color>
+    <!-- 线条颜色 -->
+    <color name="bgColor_divier">#d7d7db</color>
+    <!--错误颜色-->
+    <color name="error_color">#7c7c7c</color>
+
+
 </resources>

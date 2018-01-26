@@ -109,18 +109,21 @@ public abstract class AbstractDB {
                 try {
                     value = (String) field.get(_object);
                     clumsList.add(key);
-                    if (!value.isEmpty()) {
+                    if (null!=value) {
                         contentValues.put(key, value);
+                    }else{
+                        contentValues.put(key, "null");
                     }
                     createBuilder.append(key);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 } catch (IllegalArgumentException e) {
                     e.printStackTrace();
+                }catch (ClassCastException  cce){
+                    cce.printStackTrace();
+                }catch (Exception ex) {
                 }
-                createBuilder.append(" varchar,");
-                isColums = true;
-            }
+                }
         }
         if (!isColums) {
             return false;
@@ -141,14 +144,14 @@ public abstract class AbstractDB {
     }
 
     /**
-     * 获取数据
-     *
+     * 查询数据库
+     * @param tabName 表名
      * @return
      */
-    public String getDate() {
+    public String getDate(String tabName) {
         StringBuilder dateBuilder = new StringBuilder();
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        Cursor cursor = db.rawQuery("select * from " + tableName, null);
+        Cursor cursor = db.rawQuery("select * from " + tabName, null);
         while (cursor.moveToNext()) {
             if (clumsList != null) {
                 for (int i = 0, length = clumsList.size(); i < length; i++) {

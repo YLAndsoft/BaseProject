@@ -28,5 +28,5 @@ import java.lang.annotation.Target;
  */
 @Target(ElementType.FIELD)
 public @interface SColumDB {
-    String str_column() default "";
+    String str_column() ;
 }
