@@ -18,18 +18,18 @@ import pro.base.com.baselibrary.R;
  * Created by Sai on 15/8/15.
  * 默认的SVProgress效果
  */
-public class SVProgressDefaultView extends LinearLayout {
+public class SVPDefaultView extends LinearLayout {
     private int resBigLoading = R.drawable.ic_svstatus_loading;
     private int resInfo = R.drawable.ic_svstatus_info;
     private int resSuccess = R.drawable.ic_svstatus_success;
     private int resError = R.drawable.ic_svstatus_error;
     private ImageView ivBigLoading, ivSmallLoading;
-    private SVCircleProgressBar circleProgressBar;
+    private SVProgressBar circleProgressBar;
     private TextView tvMsg;
 
     private RotateAnimation mRotateAnimation;
 
-    public SVProgressDefaultView(Context context) {
+    public SVPDefaultView(Context context) {
         super(context);
         initViews();
         init();
@@ -39,7 +39,7 @@ public class SVProgressDefaultView extends LinearLayout {
         LayoutInflater.from(getContext()).inflate(R.layout.dialog_view_svprogressdefault, this, true);
         ivBigLoading = (ImageView) findViewById(R.id.ivBigLoading);
         ivSmallLoading = (ImageView) findViewById(R.id.ivSmallLoading);
-        circleProgressBar = (SVCircleProgressBar) findViewById(R.id.circleProgressBar);
+        circleProgressBar = (SVProgressBar) findViewById(R.id.circleProgressBar);
         tvMsg = (TextView) findViewById(R.id.tvMsg);
     }
 
@@ -87,7 +87,7 @@ public class SVProgressDefaultView extends LinearLayout {
         showProgress(string);
     }
 
-    public SVCircleProgressBar getCircleProgressBar() {
+    public SVProgressBar getCircleProgressBar() {
         return circleProgressBar;
     }
 

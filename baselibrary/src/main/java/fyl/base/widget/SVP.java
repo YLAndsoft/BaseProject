@@ -20,9 +20,9 @@ import pro.base.com.baselibrary.R;
 /**
  * Created by Sai on 15/8/15.
  */
-public class SVProgressHUD {
+public class SVP {
     private Context context;
-    private static SVProgressHUD mSVProgressHUD;
+    private static SVP mSVProgressHUD;
     private static final long DISMISSDELAYED = 1000;
     private SVProgressHUDMaskType mSVProgressHUDMaskType;
 
@@ -42,15 +42,15 @@ public class SVProgressHUD {
     );
     private ViewGroup decorView;//activity的根View
     private ViewGroup rootView;// mSharedView 的 根View
-    private SVProgressDefaultView mSharedView;
+    private SVPDefaultView mSharedView;
 
     private Animation outAnim;
     private Animation inAnim;
     private int gravity = Gravity.CENTER;
 
-    private static final SVProgressHUD getInstance(Context context) {
+    private static final SVP getInstance(Context context) {
         if (mSVProgressHUD == null) {
-            mSVProgressHUD = new SVProgressHUD();
+            mSVProgressHUD = new SVP();
             mSVProgressHUD.context = context;
             mSVProgressHUD.gravity = Gravity.CENTER;
             mSVProgressHUD.initViews();
@@ -74,7 +74,7 @@ public class SVProgressHUD {
         ));
     }
     protected void initDefaultView(){
-        mSharedView = new SVProgressDefaultView(context);
+        mSharedView = new SVPDefaultView(context);
         params.gravity = gravity;
         mSharedView.setLayoutParams(params);
     }
@@ -182,7 +182,7 @@ public class SVProgressHUD {
         getInstance(context).svShow();
     }
 
-    public static SVCircleProgressBar getProgressBar(Context context){
+    public static SVProgressBar getProgressBar(Context context){
         return getInstance(context).mSharedView.getCircleProgressBar();
     }
     public static void setText(Context context,String string){
@@ -265,12 +265,12 @@ public class SVProgressHUD {
     }
 
     public Animation getInAnimation() {
-        int res = SVProgressHUDAnimateUtil.getAnimationResource(this.gravity, true);
+        int res = SVProgressAnimateUtil.getAnimationResource(this.gravity, true);
         return AnimationUtils.loadAnimation(context, res);
     }
 
     public Animation getOutAnimation() {
-        int res = SVProgressHUDAnimateUtil.getAnimationResource(this.gravity, false);
+        int res = SVProgressAnimateUtil.getAnimationResource(this.gravity, false);
         return AnimationUtils.loadAnimation(context, res);
     }
 

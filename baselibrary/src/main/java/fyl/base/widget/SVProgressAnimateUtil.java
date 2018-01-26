@@ -9,7 +9,7 @@ import pro.base.com.baselibrary.R;
 /**
  * Created by Sai on 15/8/16.
  */
-public class SVProgressHUDAnimateUtil {
+public class SVProgressAnimateUtil {
     private static final int INVALID = -1;
     static int getAnimationResource(int gravity, boolean isInAnimation) {
         switch (gravity) {

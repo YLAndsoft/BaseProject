@@ -17,7 +17,7 @@ import pro.base.com.baselibrary.R;
 /**
  * Created by Sai on 15/9/1.
  */
-public class SVCircleProgressBar extends View {
+public class SVProgressBar extends View {
     private Context mContext;
     /**
      * 画笔对象的引用
@@ -57,31 +57,31 @@ public class SVCircleProgressBar extends View {
     public static final int STROKE = 0;
     public static final int FILL = 1;
 
-    public SVCircleProgressBar(Context context) {
+    public SVProgressBar(Context context) {
         this(context, null);
         this.mContext = context;
 
     }
 
-    public SVCircleProgressBar(Context context, AttributeSet attrs) {
+    public SVProgressBar(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
         this.mContext = context;
     }
 
-    public SVCircleProgressBar(Context context, AttributeSet attrs, int defStyle) {
+    public SVProgressBar(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         this.mContext = context;
 
         paint = new Paint();
 
-        TypedArray mTypedArray = context.obtainStyledAttributes(attrs,R.styleable.SVCircleProgressBar);
+        TypedArray mTypedArray = context.obtainStyledAttributes(attrs,R.styleable.SVProgressBar);
 
         // 获取自定义属性和默认值
-        roundColor = mTypedArray.getColor(R.styleable.SVCircleProgressBar_roundColor, Color.BLUE);
-        roundProgressColor = mTypedArray.getColor(R.styleable.SVCircleProgressBar_roundProgressColor,Color.GRAY);
-        roundWidth = mTypedArray.getDimension(R.styleable.SVCircleProgressBar_roundWidth, 5);
-        max = mTypedArray.getInteger(R.styleable.SVCircleProgressBar_max, 100);
-        style = mTypedArray.getInt(R.styleable.SVCircleProgressBar_style, 0);
+        roundColor = mTypedArray.getColor(R.styleable.SVProgressBar_roundColor, Color.BLUE);
+        roundProgressColor = mTypedArray.getColor(R.styleable.SVProgressBar_roundProgressColor,Color.GRAY);
+        roundWidth = mTypedArray.getDimension(R.styleable.SVProgressBar_roundWidth, 5);
+        max = mTypedArray.getInteger(R.styleable.SVProgressBar_max, 100);
+        style = mTypedArray.getInt(R.styleable.SVProgressBar_style, 0);
 
         mTypedArray.recycle();
     }
