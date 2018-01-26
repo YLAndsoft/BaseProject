@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_menu"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gary"
+    android:fitsSystemWindows="true" >
+    <!--android:fitsSystemWindows="true" 此属性必须设置，否则title显示不全-->
+    <LinearLayout
+        android:id="@+id/main_menu_table"
+        android:layout_width="fill_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+        <RelativeLayout
+            android:id="@+id/rl_menu_0"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_menu_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="18sp"
+                android:paddingTop="2dp"
+                android:src="@mipmap/ic_home_actionbar0" />
+
+            <TextView
+                android:id="@+id/tv_menu_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:text="首页"
+                android:textColor="@color/maintab_topbar_bg_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_menu_1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/iv_menu_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="18sp"
+                android:paddingTop="2dp"
+                android:src="@mipmap/ic_home_actionbar1"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_menu_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:textColor="#666666"
+                android:text="相机"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_menu_2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/iv_menu_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="18sp"
+                android:paddingTop="2dp"
+                android:src="@mipmap/ic_home_actionbar2" />
+
+            <TextView
+                android:id="@+id/tv_menu_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:textColor="#666666"
+                android:text="榜单"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_menu_3"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_menu_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="18sp"
+                android:paddingTop="2dp"
+                android:src="@mipmap/ic_home_actionbar3" />
+
+            <TextView
+                android:id="@+id/tv_menu_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:text="个人"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_menu_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/home_txt_line" />
+
+    <TextView
+        android:id="@id/home_txt_line"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_above="@+id/main_menu_table"
+        android:background="#efefef" />
+
+</RelativeLayout>

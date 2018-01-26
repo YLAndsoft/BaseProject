@@ -17,7 +17,7 @@ import pro.base.com.baseproject.R;
 public class DBTestActivity extends BaseActivity {
     public TextView tv_show;
     public Button btn_get;
-    private Studio student;
+    private User student;
     @Override
     public void initParms(Bundle parms) {
         //此属性设置与状态栏相关
@@ -42,7 +42,7 @@ public class DBTestActivity extends BaseActivity {
         tv_show = (TextView) findViewById(R.id.tv_show);
         btn_get = (Button) findViewById(R.id.btn_get);
     }
-
+    String user;
     @Override
     public void setListener() {
         btn_get.setOnClickListener(new View.OnClickListener() {
@@ -51,31 +51,18 @@ public class DBTestActivity extends BaseActivity {
                 new Handler().post(new Runnable() {
                     @Override
                     public void run() {
-                        tv_show.setText(student.getDate());
+                        user  = student.getDate("user");
+                        showLog(user+"");
                     }
                 });
             }
         });
+        tv_show.setText(user+"");
     }
 
     @Override
     public void doBusiness(Context mContext) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < 10; i++) {
-                    student = new Studio();
-                    student.age = i + "";
-                    student.name = "name-" + i;
-                    if (i % 2 == 0) {
-                        student.sex = "男";
-                    } else {
-                        student.sex = "女";
-                    }
-                    student.open(DBTestActivity.this, student.getClass(), student).isInsert(true);
-                }
-            }
-        }).start();
+
     }
 
     @Override

@@ -28,4 +28,15 @@
         android:padding="10dp"
         android:textColor="#000000"
         />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DEMO3"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textColor="#000000"
+        />
 </LinearLayout>

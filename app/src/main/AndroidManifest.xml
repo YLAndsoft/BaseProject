@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pro.base.com.baseproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +24,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name = "pro.base.com.baseproject.dbDemo.DBTestActivity"
             android:screenOrientation="portrait"/>
-
+        <activity android:name = "pro.base.com.baseproject.demo1.activity.SVProgressHUDActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 
