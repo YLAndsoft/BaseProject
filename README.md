@@ -57,19 +57,19 @@ SVProgressHUDMaskType的属性说明：<br>
     }<br>
   SVProgressHUD.show(mContext);//显示dialog<br>
   <br>
-  SVProgressHUD.dismiss(mContext);//关闭dialog<br>
+  SVP.dismiss(mContext);//关闭dialog<br>
   <br>
-  SVProgressHUD.isShowing(mContext);//dialog是否处于显示中 返回true,false<br>
+  SVP.isShowing(mContext);//dialog是否处于显示中 返回true,false<br>
   <br>
-  SVProgressHUD.showWithStatus(mContext,SVProgressHUDMaskType); //加载中，无文字提示<br>
+  SVP.showWithStatus(mContext,SVProgressHUDMaskType); //加载中，无文字提示<br>
   <br>
-  SVProgressHUD.showWithStatus(mContext,"加载中...",SVProgressHUDMaskType);//加载中<br>
+  SVP.showWithStatus(mContext,"加载中...",SVProgressHUDMaskType);//加载中<br>
   <br>
-  SVProgressHUD.showSuccessWithStatus(mContext,""加载成功！"",SVProgressHUDMaskType);//加载成功 参数3的属性：<br>
+  SVP.showSuccessWithStatus(mContext,""加载成功！"",SVProgressHUDMaskType);//加载成功 参数3的属性：<br>
   <br>
-  SVProgressHUD.showErrorWithStatus(mContext,""加载失败！"",SVProgressHUDMaskType);//加载失败<br>
+  SVP.showErrorWithStatus(mContext,""加载失败！"",SVProgressHUDMaskType);//加载失败<br>
   <br>
-  SVProgressHUD.showInfoWithStatus(mContext,""加载异常！"",SVProgressHUDMaskType);//加载异常<br>
+  SVP.showInfoWithStatus(mContext,""加载异常！"",SVProgressHUDMaskType);//加载异常<br>
   <br>
 
 
