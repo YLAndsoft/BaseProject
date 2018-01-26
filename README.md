@@ -1,6 +1,14 @@
 # BaseProject
 此依赖是对于Activity的一个封装
 =======
+使用：
+========
+Add it in your root build.gradle at the end of repositories:<br>
+```java
+ maven { url 'https://jitpack.io' }
+ compile 'com.github.YLAndsoft:BaseProject:v1.2'
+```
+
 1：说明：
 -----
   （1）:BaseActivity的部分方法: <br>
@@ -33,24 +41,35 @@
   Utils.init(this);<br>
   ClipUtils.init(this);<br>
   否则在使用过程中会出现空指针异常；<br>
- 
-
-使用：
-========
-Add it in your root build.gradle at the end of repositories:<br>
-```java
- maven { url 'https://jitpack.io' }
- compile 'com.github.YLAndsoft:BaseProject:v1.2'
-```
   
-  
-  
-  
-  
-  
-  
-  
-
-
+4.dialog的使用说明：<br>
+----  
+SVProgressHUDMaskType的属性说明：<br>
+  public enum SVProgressHUDMaskType {<br>
+        None,  // 允许遮罩下面控件点击<br>
+        Clear,     // 不允许遮罩下面控件点击<br>
+        Black,     // 不允许遮罩下面控件点击，背景黑色半透明<br>
+        Gradient,   // 不允许遮罩下面控件点击，背景渐变半透明<br>
+        ClearCancel,     // 不允许遮罩下面控件点击，点击遮罩消失<br>
+        BlackCancel,     // 不允许遮罩下面控件点击，背景黑色半透明，点击遮罩消失<br>
+        GradientCancel   // 不允许遮罩下面控件点击，背景渐变半透明，点击遮罩消失<br>
+        ;<br>
+    }<br>
+  SVProgressHUD.show(mContext);//显示dialog<br>
+  <br>
+  SVProgressHUD.dismiss(mContext);//关闭dialog<br>
+  <br>
+  SVProgressHUD.isShowing(mContext);//dialog是否处于显示中 返回true,false<br>
+  <br>
+  SVProgressHUD.showWithStatus(mContext,SVProgressHUDMaskType); //加载中，无文字提示<br>
+  <br>
+  SVProgressHUD.showWithStatus(mContext,"加载中...",SVProgressHUDMaskType);//加载中<br>
+  <br>
+  SVProgressHUD.showSuccessWithStatus(mContext,""加载成功！"",SVProgressHUDMaskType);//加载成功 参数3的属性：<br>
+  <br>
+  SVProgressHUD.showErrorWithStatus(mContext,""加载失败！"",SVProgressHUDMaskType);//加载失败<br>
+  <br>
+  SVProgressHUD.showInfoWithStatus(mContext,""加载异常！"",SVProgressHUDMaskType);//加载异常<br>
+  <br>
 
 
