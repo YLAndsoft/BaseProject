@@ -8,10 +8,10 @@ import org.xutils.x;
 import java.util.ArrayList;
 import java.util.List;
 import fyl.base.BaseFragment;
+import fyl.base.views.PagerSlidingTabStrip;
 import pro.base.com.baseproject.Constant;
 import pro.base.com.baseproject.R;
 import pro.base.com.baseproject.demo1.adpter.ClassifyViewPagerAdapter;
-import pro.base.com.baseproject.demo1.view.PagerSlidingTabStrip;
 
 /**
  * 首页
@@ -21,9 +21,9 @@ import pro.base.com.baseproject.demo1.view.PagerSlidingTabStrip;
 public class SYFragment extends BaseFragment {
 
     @ViewInject(value = R.id.pleasure_tabs)
-    PagerSlidingTabStrip pleasure_tabs;
+    private PagerSlidingTabStrip pleasure_tabs;
     @ViewInject(value = R.id.vp_FindFragment_pager)
-    ViewPager mViewPage;
+    private ViewPager mViewPage;
     private List<Fragment> fragments = new ArrayList<>();
     private ClassifyViewPagerAdapter classViewPagerAdapter;
     private SYTabItemFragment sytFragment1;
@@ -51,15 +51,15 @@ public class SYFragment extends BaseFragment {
         //此页卡是一次性全部加载，如页卡多的话，不建议使用次方法加载。
         //可继承BaseLazyLoadFragment 来做可见的时候加载数据操作。
         List<String> list = new ArrayList<>();
-        sytFragment1 = new SYTabItemFragment(Constant.tabName[0]);
-        sytFragment2 = new SYTabItemFragment2(Constant.tabName[1]);
-        sytFragment3 = new SYTabItemFragment3(Constant.tabName[2]);
+        sytFragment1 = new SYTabItemFragment();
+        sytFragment2 = new SYTabItemFragment2();
+        sytFragment3 = new SYTabItemFragment3();
 
         list.add(Constant.tabName[0]);
         list.add(Constant.tabName[1]);
         list.add(Constant.tabName[2]);
-        fragments.add(sytFragment1);
         fragments.add(sytFragment2);
+        fragments.add(sytFragment1);
         fragments.add(sytFragment3);
         classViewPagerAdapter = new ClassifyViewPagerAdapter(getFragmentManager(), list, fragments);
         mViewPage.setAdapter(classViewPagerAdapter);

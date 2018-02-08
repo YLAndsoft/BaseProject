@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- if you want to load images from the internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- if you want to load images from a file OR from the internet -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -22,9 +26,11 @@
         </activity>
         <activity android:name = ".demo1.fragment.DemoActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name = "pro.base.com.baseproject.dbDemo.DBTestActivity"
+        <activity android:name = "pro.base.com.baseproject.demo2.DBTestActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name = "pro.base.com.baseproject.demo1.activity.SVProgressHUDActivity"
+        <activity android:name = "pro.base.com.baseproject.demo3.SVProgressHUDActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name = "pro.base.com.baseproject.demo4.XRefreshActivity"
             android:screenOrientation="portrait"/>
 
     </application>

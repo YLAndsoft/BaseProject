@@ -1,14 +1,20 @@
 package pro.base.com.baseproject.demo1.fragment;
 
+import android.os.Handler;
 import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
+import java.util.List;
+
 import fyl.base.BaseLazyLoadFragment;
+import fyl.base.views.MyListView;
 import pro.base.com.baseproject.R;
+import pro.base.com.baseproject.demo1.DataUtils;
+import pro.base.com.baseproject.demo1.adpter.UserAdapter;
+import pro.base.com.baseproject.demo1.entity.User;
 
 /**此fragment已使用可见加载
  * Created by DN on 2018/1/10.
@@ -16,21 +22,14 @@ import pro.base.com.baseproject.R;
 
 public class SYTabItemFragment3 extends BaseLazyLoadFragment {
 
-    @ViewInject(value = R.id.tv_tab_Name)
-    private TextView tv_tab_Name;
-    @ViewInject(value = R.id.pro)
-    private ProgressBar pro;
-    private String tabName;
+
     /** 标志位，标志已经初始化完成 */
     private boolean isPrepared;
     /** 是否已被加载过一次，第二次就不再去请求数据了 */
     private boolean mHasLoadedOnce;
-    public SYTabItemFragment3(){
-    }
-    public SYTabItemFragment3(String tabName){
-        this.tabName = tabName;
-    }
 
+    private List<User> userData;
+    public static long lastRefreshTime;//刷新的时间
     @Override
     public View bindView() {
         return null;
@@ -38,7 +37,7 @@ public class SYTabItemFragment3 extends BaseLazyLoadFragment {
 
     @Override
     public int bindLayout() {
-        return R.layout.tabitem_layout;
+        return R.layout.tabitem3_layout;
     }
 
     @Override
@@ -52,24 +51,11 @@ public class SYTabItemFragment3 extends BaseLazyLoadFragment {
             return;
         }
         mHasLoadedOnce = true;//标识已经加载过
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-        pro.setVisibility(View.GONE);
-        tv_tab_Name.setVisibility(View.VISIBLE);
-        tv_tab_Name.setText("可见内容"+tabName+"");
 
     }
-
     @Override
     public void widgetClick(View v) {
 
     }
+
 }

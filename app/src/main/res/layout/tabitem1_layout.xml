@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center">
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/main_pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.andview.refreshview.XScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:descendantFocusability="blocksDescendants"
+                >
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <fyl.base.views.MyListView
+                    android:id="@+id/myList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listSelector="@color/transparent"
+                    android:divider="@color/transparent"
+                    android:scrollbars="none"/>
+            </LinearLayout>
+        </com.andview.refreshview.XScrollView>
+    </com.andview.refreshview.XRefreshView>
+</LinearLayout>

@@ -9,15 +9,10 @@ import android.widget.TextView;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import java.util.List;
-
 import fyl.base.BaseActivity;
-import fyl.base.f;
-import fyl.base.widget.SVProgressHUD;
-import pro.base.com.baseproject.dbDemo.DBTestActivity;
-import pro.base.com.baseproject.dbDemo.User;
-import pro.base.com.baseproject.dbDemo.UserData;
-import pro.base.com.baseproject.demo1.activity.SVProgressHUDActivity;
+import pro.base.com.baseproject.demo2.User;
+import pro.base.com.baseproject.demo3.SVProgressHUDActivity;
+import pro.base.com.baseproject.demo4.XRefreshActivity;
 import pro.base.com.baseproject.demo1.fragment.DemoActivity;
 
 public class MainActivity extends BaseActivity {
@@ -28,6 +23,8 @@ public class MainActivity extends BaseActivity {
     private TextView mText2;
     @ViewInject(value = R.id.textView3)
     private TextView mText3;
+    @ViewInject(value = R.id.textView4)
+    private TextView mText4;
     private String[] demoName = Constant.DEMO_NAME;
 
     private User user;
@@ -62,6 +59,7 @@ public class MainActivity extends BaseActivity {
         mText1.setOnClickListener(this);//绑定监听事件
         mText2.setOnClickListener(this);
         mText3.setOnClickListener(this);
+        mText4.setOnClickListener(this);
     }
 
     @Override
@@ -77,10 +75,13 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(mContext,DemoActivity.class));
                 break;
             case R.id.textView2:
-                startActivity(new Intent(mContext,DBTestActivity.class));
+               // startActivity(new Intent(mContext,DBTestActivity.class));
                 break;
             case R.id.textView3:
                 startActivity(new Intent(mContext,SVProgressHUDActivity.class));
+                break;
+            case R.id.textView4:
+                startActivity(new Intent(mContext,XRefreshActivity.class));
                 break;
         }
 
