@@ -34,16 +34,16 @@ public class SPUtils {
      */
     private static final String FILE_NAME1 = "share_date"; //可自行修改
     private static final String FILE_NAME2 = "share_download"; //可自行修改
-    private static SharedPreferences.Editor download_Editor;
     private static SharedPreferences.Editor editor;
+    private static SharedPreferences.Editor editor2;
     private static SharedPreferences sp;
-    private static SharedPreferences download;
+    private static SharedPreferences sp2;
     private static SPUtils spu;
     public SPUtils(Context context){
         sp = context.getApplicationContext().getSharedPreferences(FILE_NAME1, Context.MODE_PRIVATE);
         editor = sp.edit();
-        download = context.getApplicationContext().getSharedPreferences(FILE_NAME2, Context.MODE_PRIVATE);
-        download_Editor = download.edit();
+        sp2 = context.getApplicationContext().getSharedPreferences(FILE_NAME2, Context.MODE_PRIVATE);
+        editor2 = sp2.edit();
     }
     //单例模式
     public static SPUtils getInstance(Context context) {
@@ -162,19 +162,19 @@ public class SPUtils {
      * @param tag
      * @param datalist
      */
-    public  <T> boolean setDownloadList(String tag, List<T> datalist, boolean isClean) {
+    public  <T> boolean setList2(String tag, List<T> datalist, boolean isClean) {
         try{
-            //if (null == datalist || datalist.size() <= 0)
-            //   return false;
             Gson gson = new Gson();
             //转换成json数据，再保存
             String strJson = gson.toJson(datalist);
             if(isClean){
-                download_Editor.clear();
+                editor2.clear();
             }else{
-                download_Editor.putString(tag, strJson);
+                if (null == datalist || datalist.size() <= 0)
+                return false;
+                editor2.putString(tag, strJson);
             }
-            download_Editor.commit();
+            editor2.commit();
             return true;
         }catch (Exception ex ){
             Log.i("保存pag异常信息>>>",ex.toString()+"");
@@ -187,11 +187,11 @@ public class SPUtils {
      * @param tag
      * @return
      */
-    public  <T>List<T> getDownloadList(String tag,Class<T> cls) {
+    public  <T>List<T> getList2(String tag,Class<T> cls) {
         try{
             List<T> mList=new ArrayList<>();
             Gson mGson = new Gson();
-            String strJson = download.getString(tag, null);
+            String strJson = sp2.getString(tag, null);
             JsonArray array = new JsonParser().parse(strJson).getAsJsonArray();
             for(final JsonElement elem : array){
                 mList.add(mGson.fromJson(elem, cls));
@@ -208,7 +208,7 @@ public class SPUtils {
      * 保存List
      * @param tag
      * @param datalist
-     */
+     *//*
     public  <T> boolean setDataList(String tag, List<T> datalist) {
         try{
             if (null == datalist || datalist.size() <= 0)
@@ -227,11 +227,11 @@ public class SPUtils {
         }
     }
 
-    /**
+    *//**
      * 获取List
      * @param tag
      * @return
-     */
+     *//*
     public  <T>List<T> getDataList(String tag,Class<T> cls) {
         try{
             List<T> mList=new ArrayList<>();
@@ -247,7 +247,7 @@ public class SPUtils {
             ex.printStackTrace();
             return null;
         }
-    }
+    }*/
 
 
    /*

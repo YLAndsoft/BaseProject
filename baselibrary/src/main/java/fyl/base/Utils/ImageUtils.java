@@ -1152,8 +1152,7 @@ public final class ImageUtils {
      * @return 模糊后的图片
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
-    public static Bitmap renderScriptBlur(final Bitmap src,
-                                          @FloatRange(from = 0, to = 25, fromInclusive = false) final float radius) {
+    public static Bitmap renderScriptBlur(final Bitmap src, @FloatRange(from = 0, to = 25, fromInclusive = false) final float radius) {
         return renderScriptBlur(src, radius, false);
     }
 
@@ -1167,9 +1166,7 @@ public final class ImageUtils {
      * @return 模糊后的图片
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
-    public static Bitmap renderScriptBlur(final Bitmap src,
-                                          @FloatRange(from = 0, to = 25, fromInclusive = false) final float radius,
-                                          final boolean recycle) {
+    public static Bitmap renderScriptBlur(final Bitmap src,@FloatRange(from = 0, to = 25, fromInclusive = false) final float radius,final boolean recycle) {
         if (isEmptyBitmap(src)) return null;
         RenderScript rs = null;
         Bitmap ret = recycle ? src : src.copy(src.getConfig(), true);
