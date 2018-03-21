@@ -16,10 +16,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
-
-
 import java.util.List;
-
 import fyl.base.constant.Constant;
 import pro.base.com.baselibrary.R;
 import fyl.base.widget.SystemBarTintManager;

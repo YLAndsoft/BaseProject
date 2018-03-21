@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.baidu.mobstat.StatService;
 
 import fyl.base.constant.Constant;
 
@@ -113,20 +112,12 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     @Override
     public void onResume() {
         super.onResume();
-        //百度统计:这里加上统计是想统计多少人使用，根据需求，可注释掉！
-        if(f.isBaiDuState){
-            StatService.onPageStart(mContext, "BaseFragment");
-        }
 
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        if(f.isBaiDuState){
-            StatService.onPageEnd(mContext, "BaseFragment");
-        }
-
     }
     @Override
     public void onDestroy() {

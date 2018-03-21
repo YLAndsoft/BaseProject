@@ -15,12 +15,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
-
-import com.baidu.mobstat.StatService;
-
 import fyl.base.constant.Constant;
 import fyl.base.widget.SystemBarTintManager;
-import pro.base.com.baselibrary.R;
 
 /**
  * 说明：继承此activity，必须在继承者的布局文件父节点中添加属性：
@@ -269,18 +265,10 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
     @Override
     public void onResume() {
         super.onResume();
-        //百度统计:这里加上统计是想统计多少人使用，根据需求，可注释掉！
-        if(f.isBaiDuState){
-            StatService.onResume(mContext);
-        }
     }
     @Override
     public void onPause() {
         super.onPause();
-        //百度统计
-        if(f.isBaiDuState){
-            StatService.onPause(mContext);
-        }
     }
 
 
