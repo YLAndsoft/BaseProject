@@ -30,6 +30,4 @@ dependencies {
     compile 'org.xutils:xutils:3.5.0'
     testCompile 'junit:junit:4.12'
     compile 'com.google.code.gson:gson:2.8.2'
-
-    compile 'com.baidu.mobstat:mtj-sdk:latest.integration'
 }
