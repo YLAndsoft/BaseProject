@@ -1,10 +1,9 @@
 package pro.base.com.baseproject.demo1.fragment;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.andview.refreshview.XRefreshView;
 import com.youth.banner.Banner;
@@ -20,11 +19,14 @@ import java.util.List;
 
 import fyl.base.BaseLazyLoadFragment;
 import fyl.base.views.MyListView;
+import pro.base.com.baseproject.Constant;
 import pro.base.com.baseproject.R;
 import pro.base.com.baseproject.demo1.DataUtils;
 import pro.base.com.baseproject.demo1.GlideImageLoader;
 import pro.base.com.baseproject.demo1.adpter.User1Adapter;
 import pro.base.com.baseproject.demo1.entity.User;
+import pro.base.com.baseproject.demo5.entity.ChatMessage;
+import pro.base.com.baseproject.demo5.ui.ChatActivity;
 
 /**
  * 此fragment已使用可见加载
@@ -89,7 +91,7 @@ public class SYTabItemFragment extends BaseLazyLoadFragment implements XRefreshV
 
     private void initBanner() {
         //设置banner样式
-        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE);
+        banner.setBannerStyle(BannerConfig.NOT_INDICATOR);
         //设置图片加载器
         banner.setImageLoader(new GlideImageLoader());
         //设置图片集合
@@ -98,7 +100,7 @@ public class SYTabItemFragment extends BaseLazyLoadFragment implements XRefreshV
         //设置banner动画效果
         banner.setBannerAnimation(Transformer.Default);
         //设置标题集合（当banner样式有显示title时）
-        banner.setBannerTitles(DataUtils.getImageTitle());
+        //banner.setBannerTitles(DataUtils.getImageTitle());
         //设置自动轮播，默认为true
         banner.isAutoPlay(true);
         //设置轮播时间
@@ -119,8 +121,10 @@ public class SYTabItemFragment extends BaseLazyLoadFragment implements XRefreshV
          //这里做加载数据的操作
         List<User> data = DataUtils.getData(size, mContext);
         isData= data!=null&&data.size()>0;
-        if(data!=null&&data.size()>0){mData.addAll(data);}
-        if(isData){size = size+1;}
+        if(isData){
+            mData.addAll(data);
+            size = size+1;
+        }
         u1Adapter = new User1Adapter(mContext);
         myList.setAdapter(u1Adapter);
         u1Adapter.refresh(mData);
@@ -129,7 +133,17 @@ public class SYTabItemFragment extends BaseLazyLoadFragment implements XRefreshV
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 User user = mData.get(i);
-                showToast(user.getUserName()+"");
+                Intent chatIntent = new Intent(mContext,ChatActivity.class);
+                //此处必须传的类
+                ChatMessage chatMessage = new ChatMessage();
+                chatMessage.setRecevice_userHead(user.getUserHeadUrl());
+                chatMessage.setRecevice_userName(user.getUserName());
+                chatMessage.setRecevice_iD(user.getAccount());
+                chatMessage.setSend_userHead(Constant.headUrl);
+                chatMessage.setSend_userName(Constant.userName);
+                //此处必须发送的实体类
+                chatIntent.putExtra("chatMessage",chatMessage);
+                startActivity(chatIntent);
             }
         });
 
@@ -214,7 +228,8 @@ public class SYTabItemFragment extends BaseLazyLoadFragment implements XRefreshV
     @Override
     public void onDestroy() {
         super.onDestroy();
-        size=0;
+        size=1;
+        mHasLoadedOnce = false;
     }
 
     @Override

@@ -18,11 +18,14 @@
             android:text="个人中心"/>
 
     </RelativeLayout>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/check_chatInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        android:text="这是个人页面"/>
+        android:text="查看聊友"/>
 </LinearLayout>

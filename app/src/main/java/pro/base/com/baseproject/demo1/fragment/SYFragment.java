@@ -58,8 +58,8 @@ public class SYFragment extends BaseFragment {
         list.add(Constant.tabName[0]);
         list.add(Constant.tabName[1]);
         list.add(Constant.tabName[2]);
-        fragments.add(sytFragment2);
         fragments.add(sytFragment1);
+        fragments.add(sytFragment2);
         fragments.add(sytFragment3);
         classViewPagerAdapter = new ClassifyViewPagerAdapter(getFragmentManager(), list, fragments);
         mViewPage.setAdapter(classViewPagerAdapter);

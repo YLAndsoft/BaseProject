@@ -37,10 +37,11 @@ dependencies {
     compile 'com.shizhefei:CoolRefreshView:1.0.1'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
     compile 'com.android.support:support-v4:26.0.0-alpha1'
-
     compile 'com.huxq17.xrefreshview:xrefreshview:3.6.9'
-
     compile 'com.youth.banner:banner:1.4.10'
+
+    compile 'com.arialyy.aria:aria-core:3.3.14'
+    annotationProcessor 'com.arialyy.aria:aria-compiler:3.3.14'
 
     compile project(':baselibrary')
 }

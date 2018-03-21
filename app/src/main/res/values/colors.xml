@@ -6,13 +6,26 @@
     <color name="system_bar_color">#3F51B5</color>
     <color name="white">#ffffffff</color>
     <color name="gary">#EBEAE8</color>
+
+    <color name="app_gary">#696969</color>
+
     <!-- 主色 按住蓝 -->
     <color name="maintab_topbar_bg_color">#18131A</color>
 
+    <color name="systembar_color">#18131A</color>
 
     <color name="transparent">#00000000</color>
-
     <color name="activity_bg_white">#ffffffff</color>
     <color name="text_black_light">#ff5c5e61</color>
     <color name="background_tab_pressed">#00000000</color>
+
+    <!--与聊天相关-->
+    <color name="top_bar_normal_bg">#333333</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="gray_normal">#666667</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="holo_green_light">#ff99cc00</color>
+    <color name="holo_orange_light">#ffffbb33</color>
+    <color name="holo_red_light">#ffff4444</color>
+
 </resources>

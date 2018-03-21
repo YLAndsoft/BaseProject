@@ -1,25 +1,14 @@
 package pro.base.com.baseproject.demo1.fragment;
 
-import android.os.Handler;
 import android.view.View;
-import android.widget.ListView;
-
 import com.shizhefei.mvc.MVCCoolHelper;
 import com.shizhefei.mvc.MVCHelper;
 import com.shizhefei.view.coolrefreshview.CoolRefreshView;
-import com.youth.banner.Banner;
-import com.youth.banner.BannerConfig;
-import com.youth.banner.Transformer;
-
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
-
-import java.util.ArrayList;
 import java.util.List;
 import fyl.base.BaseLazyLoadFragment;
 import pro.base.com.baseproject.R;
-import pro.base.com.baseproject.demo1.DataUtils;
-import pro.base.com.baseproject.demo1.GlideImageLoader;
 import pro.base.com.baseproject.demo1.UserDataSource;
 import pro.base.com.baseproject.demo1.adpter.UserAdapter;
 import pro.base.com.baseproject.demo1.entity.User;
@@ -84,6 +73,8 @@ public class SYTabItemFragment2 extends BaseLazyLoadFragment  {
     public void onDestroy() {
         super.onDestroy();
         // 释放资源
-        mvcHelper.destory();
+        if(mvcHelper!=null){
+            mvcHelper.destory();
+        }
     }
 }

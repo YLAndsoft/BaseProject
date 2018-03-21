@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zzzzzzzzzpoint_rl_mypoptop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/transparent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/zzzzzzzzzpoint_rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#27BA4F" >
+
+        <ImageView
+            android:id="@+id/zzzzzzzzzpoint_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/chat_mm_title_back" />
+
+        <TextView
+            android:id="@+id/zzzzzzzzzpoint_tv_appname1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/zzzzzzzzzpoint_iv_back"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/zzzzzzzzzpoint_iv_share1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/zzzzzzzzzpoint_rl_body"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/zzzzzzzzzpoint_iv_appicon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/zzzzzzzzzpoint_tv_appdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/zzzzzzzzzpoint_iv_appicon"
+            android:text=""
+            android:textColor="#696969"
+            android:textSize="12sp" />
+
+
+        <FrameLayout
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:clickable="false" >
+            <ProgressBar
+                android:id="@+id/zzzzzzzzzpoint_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:clickable="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/download_bg" />
+            <TextView
+                android:id="@+id/zzzzzzzzzpoint_tv_download"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:text="下载"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_selector"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d3d3d3" />
+
+</LinearLayout>

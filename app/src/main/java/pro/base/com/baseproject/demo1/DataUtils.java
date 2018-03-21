@@ -26,11 +26,11 @@ public class DataUtils {
         return getUserData(assetsName,context);
     }
     public static List<User> getUserData(String jsonName,Context context){
-        try {
-            Thread.sleep(2000);
+        /*try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
         List<User> fromJson = null;
         try{
             String json = isPrassString(jsonName, context);

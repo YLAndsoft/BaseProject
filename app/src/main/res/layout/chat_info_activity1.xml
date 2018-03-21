@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_layout"/>
+
+    <ListView
+        android:id="@+id/chat_info_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:listSelector="@color/transparent"/>
+
+    <TextView
+        android:id="@+id/info_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="暂无任何聊天信息"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#FF969595"
+        android:textSize="18sp"/>
+
+</LinearLayout>

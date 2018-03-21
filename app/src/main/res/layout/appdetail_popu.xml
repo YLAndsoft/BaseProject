@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zzzzzzzzzpoint_rl_mypopdetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <pro.base.com.baseproject.demo6.views.MyScrollView
+        android:id="@+id/zzzzzzzzzpoint_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/zzzzzzzzzpoint_ll_titlenull"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/transparent"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/zzzzzzzzzpoint_rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/zzzzzzzzzpoint_ll_titlenull"
+                android:background="@color/white" >
+
+                <RelativeLayout
+                    android:id="@+id/zzzzzzzzzpoint_rl_app_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" >
+
+                    <RelativeLayout
+                        android:id="@+id/zzzzzzzzzpoint_rl_closeandshare"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/zzzzzzzzzpoint_iv_close"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/cancel_night" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/zzzzzzzzzpoint_rl_appinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/zzzzzzzzzpoint_rl_closeandshare" >
+
+                        <LinearLayout
+                            android:id="@+id/zzzzzzzzzpoint_ll_app_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+
+                            >
+
+                            <ImageView
+                                android:id="@+id/zzzzzzzzzpoint_iv_appicon"
+                                android:layout_width="75dp"
+                                android:layout_height="75dp" />
+
+                            <TextView
+                                android:id="@+id/zzzzzzzzzpoint_tv_appname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text=""
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="6dp"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:gravity="center"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_details_brief"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:text="说明："
+                                    android:textStyle="bold"
+                                    android:textColor="#E81010"
+                                    android:textSize="15sp" />
+                                <TextView
+                                    android:id="@+id/zzzzzzzzzpoint_tv_appbrief"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="#E81010"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp" >
+                                <TextView
+                                    android:id="@+id/zzzzzzzzzpoint_tv_appstatus1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text=""
+                                    android:textColor="#696969"
+                                    android:textSize="10sp" />
+                                <TextView
+                                    android:id="@+id/zzzzzzzzzpoint_tv_point1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_toRightOf="@+id/zzzzzzzzzpoint_tv_appstatus1"
+                                    android:text="."
+                                    android:textColor="#696969"
+                                    android:textSize="13sp" />
+                                <TextView
+                                    android:id="@+id/zzzzzzzzzpoint_tv_appstatus2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_toRightOf="@+id/zzzzzzzzzpoint_tv_point1"
+                                    android:text=""
+                                    android:textColor="#696969"
+                                    android:textSize="10sp" />
+                                <TextView
+                                    android:id="@+id/zzzzzzzzzpoint_tv_point2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_toRightOf="@+id/zzzzzzzzzpoint_tv_appstatus2"
+                                    android:text="."
+                                    android:textColor="#696969"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/zzzzzzzzzpoint_tv_appstatus3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_toRightOf="@+id/zzzzzzzzzpoint_tv_point2"
+                                    android:text=""
+                                    android:textColor="#696969"
+                                    android:textSize="10sp" />
+                            </RelativeLayout>
+                            <FrameLayout
+                                android:layout_width="110dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="20dp"
+                                android:clickable="false" >
+                                <ProgressBar
+                                    android:id="@+id/zzzzzzzzzpoint_progressBar"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:clickable="false"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/download_bg" />
+                                <TextView
+                                    android:id="@+id/zzzzzzzzzpoint_tv_download"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="下载"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:background="@drawable/bg_button_selector"/>
+                            </FrameLayout>
+                            <LinearLayout
+                                android:id="@+id/zzzzzzzzzpoint_ll_mark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="40dp"
+                                    android:layout_height="1px"
+                                    android:background="#C8CDCB" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="~"
+                                    android:textColor="#696969" />
+
+                                <TextView
+                                    android:layout_width="40dp"
+                                    android:layout_height="1px"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="#C8CDCB" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/zzzzzzzzzpoint_tv_apptag1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/appdetails_tag_shpae"
+                                    android:gravity="center"
+                                    android:paddingLeft="8dp"
+                                    android:paddingRight="8dp"
+                                    android:paddingTop="2dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="游戏"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/zzzzzzzzzpoint_tv_apptag2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/appdetails_tag_shpae2"
+                                    android:gravity="center"
+                                    android:paddingLeft="8dp"
+                                    android:paddingRight="8dp"
+                                    android:paddingTop="2dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="动作"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/zzzzzzzzzpoint_ll_apppics"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_below="@+id/zzzzzzzzzpoint_ll_app_title"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical"
+                            android:visibility="visible" >
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:overScrollMode="never"
+                                android:scrollbars="none" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal" >
+
+                                    <ImageView
+                                        android:id="@+id/zzzzzzzzzpoint_iv_apppic1"
+                                        android:layout_width="140dp"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="fitXY" />
+
+                                    <ImageView
+                                        android:id="@+id/zzzzzzzzzpoint_iv_apppic2"
+                                        android:layout_width="140dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="2dp"
+                                        android:scaleType="fitXY" />
+
+                                    <ImageView
+                                        android:id="@+id/zzzzzzzzzpoint_iv_apppic3"
+                                        android:layout_width="140dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="2dp"
+                                        android:scaleType="fitXY" />
+
+                                    <ImageView
+                                        android:id="@+id/zzzzzzzzzpoint_iv_apppic4"
+                                        android:layout_width="140dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="2dp"
+                                        android:scaleType="fitXY" />
+
+                                    <ImageView
+                                        android:id="@+id/zzzzzzzzzpoint_iv_apppic5"
+                                        android:layout_width="140dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="2dp"
+                                        android:scaleType="fitXY" />
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/zzzzzzzzzpoint_rl_mark2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zzzzzzzzzpoint_ll_apppics"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center_vertical"
+                            >
+                            <LinearLayout
+                                android:id="@+id/zzzzzzzzzpoint_ll_mark2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="40dp"
+                                    android:layout_height="1px"
+                                    android:background="#C8CDCB" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="~"
+                                    android:textColor="#696969" />
+
+                                <TextView
+                                    android:layout_width="40dp"
+                                    android:layout_height="1px"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="#C8CDCB" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/zzzzzzzzzpoint_tv_report"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="举报"
+                                android:paddingLeft="6dip"
+                                android:paddingRight="6dip"
+                                android:paddingTop="2dip"
+                                android:gravity="center"
+                                android:textSize="18sp"
+                                android:paddingBottom="2dip"
+                                android:layout_marginTop="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="15dip"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/white"
+                                android:background="@drawable/report_shape"
+                                />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/zzzzzzzzzpoint_rl_yyms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zzzzzzzzzpoint_rl_mark2"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/zzzzzzzzzpoint_iv_appdesc_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_description1" />
+
+                            <TextView
+                                android:id="@+id/zzzzzzzzzpoint_tv_app_dec"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/zzzzzzzzzpoint_iv_appdesc_icon"
+                                android:text="应用描述"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/zzzzzzzzzpoint_tv_appdescdetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/zzzzzzzzzpoint_tv_app_dec"
+                                android:layout_below="@+id/zzzzzzzzzpoint_tv_app_dec"
+                                android:layout_marginTop="10dp"
+                                android:maxLines="5"
+                                android:textColor="#696969"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/zzzzzzzzzpoint_iv_deschideandshow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/zzzzzzzzzpoint_tv_appdescdetail"
+                                android:background="@drawable/point_arrow_down" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/zzzzzzzzzpoint_rl_appdetailinfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zzzzzzzzzpoint_rl_yyms"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp" >
+
+                            <ImageView
+                                android:id="@+id/zzzzzzzzzpoint_iv_appdesc_icon2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_detail_info1" />
+
+                            <TextView
+                                android:id="@+id/zzzzzzzzzpoint_tv_app_dec2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/zzzzzzzzzpoint_iv_appdesc_icon2"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/zzzzzzzzzpoint_iv_appdesc_icon2"
+                                android:text="详细信息"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:id="@+id/zzzzzzzzzpoint_ll_detailinfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/zzzzzzzzzpoint_tv_app_dec2"
+                                android:layout_below="@+id/zzzzzzzzzpoint_tv_app_dec2"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="更新时间"
+                                        android:textColor="#696969"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/zzzzzzzzzpoint_tv_appupdatetime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:text=""
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="最新版本"
+                                        android:textColor="#696969"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/zzzzzzzzzpoint_tv_applatestversion"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:text=""
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/zzzzzzzzzpoint_tv_versionhistory"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="30dp"
+                                        android:text="历史版本"
+                                        android:textColor="#178B58"
+                                        android:textSize="12sp"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="应用来源"
+                                        android:textColor="#696969"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/zzzzzzzzzpoint_tv_appsource"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:text=""
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="12dp"
+                                        android:text="开发者"
+                                        android:textColor="#696969"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/zzzzzzzzzpoint_tv_appdeveloper"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:text=""
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="使用权限"
+                                        android:textColor="#696969"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/zzzzzzzzzpoint_tv_apppermission"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:ellipsize="end"
+                                        android:maxWidth="60dp"
+                                        android:singleLine="true"
+                                        android:text=""
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/zzzzzzzzzpoint_rl_showallinfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/zzzzzzzzzpoint_ll_detailinfo" >
+
+                                <TextView
+                                    android:id="@+id/zzzzzzzzzpoint_tv_showall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="查看全部"
+                                    android:textColor="#27BA4F"
+                                    android:textSize="15sp" />
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/zzzzzzzzzpoint_tv_showall"
+                                    android:background="@drawable/ic_explore_section_arrow_normal" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                        <!-- rl_appdetailinfo -->
+
+                        <TextView
+                            android:id="@+id/zzzzzzzzzpoint_tv_splitline"
+                            android:layout_width="match_parent"
+                            android:layout_height="20px"
+                            android:layout_below="@+id/zzzzzzzzzpoint_rl_appdetailinfo"
+                            android:layout_marginTop="20dp"
+                            android:background="#C8CDCB" />
+
+                        <RelativeLayout
+                            android:id="@+id/zzzzzzzzzpoint_rl_comments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zzzzzzzzzpoint_tv_splitline"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp" >
+
+                            <ImageView
+                                android:id="@+id/zzzzzzzzzpoint_iv_ic_comments"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_comments1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/zzzzzzzzzpoint_iv_ic_comments"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/zzzzzzzzzpoint_iv_ic_comments"
+                                android:text="评论"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/zzzzzzzzzpoint_tv_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_below="@+id/zzzzzzzzzpoint_rl_comments"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#C8CDCB" />
+
+                        <RelativeLayout
+                            android:id="@+id/zzzzzzzzzpoint_rl_comments_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/zzzzzzzzzpoint_tv_line"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp" >
+
+                            <ImageView
+                                android:id="@+id/zzzzzzzzzpoint_iv_like"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/icon_favorite_grey1" />
+
+                            <EditText
+                                android:id="@+id/zzzzzzzzzpoint_edt_comments"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/zzzzzzzzzpoint_iv_like"
+                                android:editable="false"
+                                android:hint="我要评论"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <fyl.base.views.MyListView
+                            android:id="@+id/zzzzzzzzzpoint_lv_comments"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/zzzzzzzzzpoint_rl_comments_edit"
+                            android:layout_marginTop="5dp"
+                            android:divider="@android:color/transparent" />
+
+                        <RelativeLayout
+                            android:id="@+id/zzzzzzzzzpoint_rl_showallcomments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/zzzzzzzzzpoint_lv_comments"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginRight="15dp" >
+
+                            <TextView
+                                android:id="@+id/zzzzzzzzzpoint_tv_showall1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="20dp"
+                                android:text="查看全部"
+                                android:textColor="#178B58"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/zzzzzzzzzpoint_tv_showall1"
+                                android:background="@drawable/ic_explore_section_arrow_normal" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/zzzzzzzzzpoint_progress1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDrawable="@drawable/progress_small" />
+                <!-- rl_appinfo -->
+            </RelativeLayout>
+            <!-- rl_content -->
+        </RelativeLayout>
+        <!-- ScrollView_content -->
+    </pro.base.com.baseproject.demo6.views.MyScrollView>
+
+</RelativeLayout>

@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:gravity="center">
+
     <com.andview.refreshview.XRefreshView
         android:id="@+id/main_pull_refresh_view"
         android:layout_width="match_parent"

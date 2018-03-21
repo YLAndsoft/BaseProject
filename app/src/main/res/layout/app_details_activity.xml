@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/details_appcontent_layout"/>
+
+    <include layout="@layout/details_top_layout"/>
+    <RelativeLayout
+        android:id="@+id/detials_rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/system_bar_color" >
+        <ImageView
+            android:id="@+id/detials_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:onClick="toBack"
+            android:src="@drawable/chat_mm_title_back" />
+        <TextView
+            android:id="@+id/details_topAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/detials_iv_back"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

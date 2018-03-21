@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="单线程模拟下载:"/>
+        <FrameLayout
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:clickable="false" >
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:clickable="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/download_bg" />
+            <TextView
+                android:id="@+id/download_txt"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:text="下载"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_selector"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/system_bar_color"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="多线程模拟下载:"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:clickable="false" >
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/download_bg" />
+                <TextView
+                    android:id="@+id/download_txt1"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:text="下载"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_selector"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:clickable="false" >
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/download_bg" />
+                <TextView
+                    android:id="@+id/download_txt2"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:text="下载"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_selector"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:clickable="false" >
+                <ProgressBar
+                    android:id="@+id/progressBar3"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/download_bg" />
+                <TextView
+                    android:id="@+id/download_txt3"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:text="下载"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_selector"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:clickable="false" >
+                <ProgressBar
+                    android:id="@+id/progressBar4"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:clickable="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/download_bg" />
+                <TextView
+                    android:id="@+id/download_txt4"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:text="下载"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_selector"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

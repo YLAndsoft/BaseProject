@@ -12,8 +12,9 @@ import org.xutils.x;
 import fyl.base.BaseActivity;
 import pro.base.com.baseproject.demo2.User;
 import pro.base.com.baseproject.demo3.SVProgressHUDActivity;
-import pro.base.com.baseproject.demo4.XRefreshActivity;
 import pro.base.com.baseproject.demo1.fragment.DemoActivity;
+import pro.base.com.baseproject.demo4.LayerListActivity;
+import pro.base.com.baseproject.demo6.AriaActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -25,12 +26,15 @@ public class MainActivity extends BaseActivity {
     private TextView mText3;
     @ViewInject(value = R.id.textView4)
     private TextView mText4;
+    @ViewInject(value = R.id.textView5)
+    private TextView mText5;
+    @ViewInject(value = R.id.textView6)
+    private TextView mText6;
     private String[] demoName = Constant.DEMO_NAME;
 
     private User user;
     @Override
     public void initParms(Bundle parms) {
-
         //此属性设置与状态栏相关
         setAllowFullScreen(true);//是否允许全屏
         setScreenRoate(false);//是否允许屏幕旋转
@@ -60,6 +64,9 @@ public class MainActivity extends BaseActivity {
         mText2.setOnClickListener(this);
         mText3.setOnClickListener(this);
         mText4.setOnClickListener(this);
+        mText5.setOnClickListener(this);
+        mText6.setOnClickListener(this);
+
     }
 
     @Override
@@ -81,8 +88,15 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(mContext,SVProgressHUDActivity.class));
                 break;
             case R.id.textView4:
-                startActivity(new Intent(mContext,XRefreshActivity.class));
+                startActivity(new Intent(mContext,LayerListActivity.class));
                 break;
+            case R.id.textView5:
+                //startActivity(new Intent(mContext,ChatActivity.class));
+                break;
+            case R.id.textView6:
+                startActivity(new Intent(mContext,AriaActivity.class));
+                break;
+
         }
 
     }
