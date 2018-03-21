@@ -1,3 +1,6 @@
+
+![image](https://github.com/YLAndsoft/BaseProject/blob/master/app/src/main/assets/demo1.gif)<br>
+<br>
 # BaseProject
 此依赖是对于Activity的一个封装
 =======
