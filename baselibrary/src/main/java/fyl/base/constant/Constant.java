@@ -1,8 +1,6 @@
 package fyl.base.constant;
 
-import android.os.Environment;
-
-import java.io.File;
+import pro.base.com.baselibrary.R;
 
 /**
  * Created by DN on 2017/12/5.
@@ -33,10 +31,6 @@ public class Constant {
     public static final  int  PERMISSION_CODE = 100;
     public static final  int  REQUEST_CODE_SETTING = 100;
 
-
-
-    //保存地址
-    public  static  final  String clearImagePath = Environment.getExternalStorageDirectory().getAbsolutePath()+ File.separator + "360wallpaper";
 
 
 }

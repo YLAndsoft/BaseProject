@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -115,7 +116,7 @@ public class SPUtils {
      * @param map map数据
      * @return 保存结果
      */
-    public  <K, V> boolean putHashMapData(String key, ArrayMap<K, V> map) {
+    public  <K, V> boolean putHashMapData(String key, Map<K, V> map) {
         boolean result;
         try {
             Gson gson = new Gson();
@@ -136,11 +137,11 @@ public class SPUtils {
      * @param key key
      * @return HashMap
      */
-    public  <V> ArrayMap<String, V> getHashMapData(String key, Class<V> clsV) {
+    public  <V> Map<String, V> getHashMapData(String key, Class<V> clsV) {
         try{
             String json = sp.getString(key, "");
             if(json==null){return null;}
-            ArrayMap<String, V> map = new ArrayMap<String, V>();
+            Map<String, V> map = new HashMap<>();
             Gson gson = new Gson();
             JsonObject obj = new JsonParser().parse(json).getAsJsonObject();
             Set<Map.Entry<String, JsonElement>> entrySet = obj.entrySet();

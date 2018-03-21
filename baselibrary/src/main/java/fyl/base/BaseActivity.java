@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,6 +20,7 @@ import com.baidu.mobstat.StatService;
 
 import fyl.base.constant.Constant;
 import fyl.base.widget.SystemBarTintManager;
+import pro.base.com.baselibrary.R;
 
 /**
  * 说明：继承此activity，必须在继承者的布局文件父节点中添加属性：
@@ -42,7 +44,7 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
     protected final String TAG = this.getClass().getSimpleName();
     /**上文*/
     protected Context mContext;
-    private int mResColor;
+    private int mResColor = Color.parseColor("#3F51B5");
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
