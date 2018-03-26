@@ -298,7 +298,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements V
      * @param msg
      */
     protected void showToast(String msg){
-        if(Constant.isShowToast){
+        if(Fyl.isShowToast){
             Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
         }
 
@@ -310,7 +310,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements V
      */
     public static final String TAG1 = "BaseActivity";
     protected void showLog(String msg){
-        if(Constant.isShowLog){
+        if(Fyl.isShowLog){
             Log.i(TAG1,msg);
         }
     }

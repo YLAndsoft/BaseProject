@@ -60,7 +60,7 @@ public class ChatInfoUtils {
                         }
                         //排序
                         List<ChatMessage> chatMessages = ListUtils.upsideDownLong(list);
-                        SPUtils.getInstance(context).setList2(Constant.USER_INFO_LIST, chatMessages,chatMessages!=null&&chatMessages.size()>0?false:true);
+                        SPUtils.getInstance(context).setList2(Constant.USER_INFO_LIST, chatMessages);
                         return chatMessages;
                     }else{
                         newlist.add(newChatMessage);
@@ -74,7 +74,7 @@ public class ChatInfoUtils {
             ex.printStackTrace();
         }
         List<ChatMessage> chatMessages = ListUtils.upsideDownLong(newlist);
-        SPUtils.getInstance(context).setList2(Constant.USER_INFO_LIST, chatMessages,chatMessages!=null&&chatMessages.size()>0?false:true);
+        SPUtils.getInstance(context).setList2(Constant.USER_INFO_LIST, chatMessages);
         return chatMessages;
     }
 
@@ -113,7 +113,7 @@ public class ChatInfoUtils {
                 }
                 //保存
                 chatMe = ListUtils.upsideDownLong(newList);
-                SPUtils.getInstance(context).setList2(Constant.USER_INFO_LIST, chatMe,chatMe!=null&&chatMe.size()>0?false:true);
+                SPUtils.getInstance(context).setList2(Constant.USER_INFO_LIST, chatMe);
                 return chatMe;
             }
         } catch (Exception ex) {
@@ -143,7 +143,7 @@ public class ChatInfoUtils {
                 }
                 //保存
                 chatMe = ListUtils.upsideDownLong(newList);
-                SPUtils.getInstance(context).setList2(Constant.USER_INFO_LIST, chatMe,chatMe!=null&&chatMe.size()>0?false:true);
+                SPUtils.getInstance(context).setList2(Constant.USER_INFO_LIST, chatMe);
             }
         }catch (Exception ex){
             ex.printStackTrace();

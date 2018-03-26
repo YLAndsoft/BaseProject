@@ -193,6 +193,10 @@ public class ViewAnimationUtils {
                     if (animationListener != null) {
                         animationListener.onAnimationEnd(animation);
                     }
+                    //关闭动画，释放资源
+                    if(view!=null){
+                        view.clearAnimation();
+                    }
                 }
             });
             //android:fillAfter：动画结束之后是否保持动画的最终状态；true，表示保持动画的最终状态
@@ -323,6 +327,10 @@ public class ViewAnimationUtils {
                     }
                     if (animationListener != null) {
                         animationListener.onAnimationEnd(animation);
+                    }
+                    //关闭动画，释放资源
+                    if(view!=null){
+                        view.clearAnimation();
                     }
                 }
             });
@@ -455,6 +463,10 @@ public class ViewAnimationUtils {
             public void onAnimationEnd(Animation animation) {
                 if (isBanClick) {
                     view.setClickable(true);
+                }
+                //关闭动画，释放资源
+                if(view!=null){
+                    view.clearAnimation();
                 }
             }
         });

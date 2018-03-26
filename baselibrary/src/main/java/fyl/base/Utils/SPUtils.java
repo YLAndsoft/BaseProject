@@ -2,6 +2,7 @@ package fyl.base.Utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.support.annotation.NonNull;
 import android.util.ArrayMap;
 import android.util.Log;
 
@@ -34,17 +35,13 @@ public class SPUtils {
      * 保存在手机里面的文件名
      */
     private static final String FILE_NAME1 = "share_date"; //可自行修改
-    private static final String FILE_NAME2 = "share_download"; //可自行修改
     private static SharedPreferences.Editor editor;
-    private static SharedPreferences.Editor editor2;
     private static SharedPreferences sp;
-    private static SharedPreferences sp2;
     private static SPUtils spu;
     public SPUtils(Context context){
         sp = context.getApplicationContext().getSharedPreferences(FILE_NAME1, Context.MODE_PRIVATE);
         editor = sp.edit();
-        sp2 = context.getApplicationContext().getSharedPreferences(FILE_NAME2, Context.MODE_PRIVATE);
-        editor2 = sp2.edit();
+
     }
     //单例模式
     public static SPUtils getInstance(Context context) {
@@ -59,7 +56,7 @@ public class SPUtils {
      * @param key
      * @param object
      */
-    public void setParam( String key, Object object){
+    public void setParam( @NonNull String key,@NonNull  Object object){
         String type = object.getClass().getSimpleName();
         if("String".equals(type)){
             editor.putString(key, (String)object);
@@ -76,7 +73,7 @@ public class SPUtils {
         else if("Long".equals(type)){
             editor.putLong(key, (Long)object);
         }
-        editor.commit();
+        editor.apply();
     }
 
 
@@ -86,7 +83,7 @@ public class SPUtils {
      * @param defaultObject
      * @return
      */
-    public Object getParam(String key, Object defaultObject){
+    public Object getParam(@NonNull String key, @NonNull Object defaultObject){
         String type = defaultObject.getClass().getSimpleName();
 
         if("String".equals(type)){
@@ -116,7 +113,7 @@ public class SPUtils {
      * @param map map数据
      * @return 保存结果
      */
-    public  <K, V> boolean putHashMapData(String key, Map<K, V> map) {
+    public  <K, V> boolean putHashMapData(@NonNull String key, @NonNull Map<K, V> map) {
         boolean result;
         try {
             Gson gson = new Gson();
@@ -137,7 +134,7 @@ public class SPUtils {
      * @param key key
      * @return HashMap
      */
-    public  <V> Map<String, V> getHashMapData(String key, Class<V> clsV) {
+    public  <V> Map<String, V> getHashMapData(@NonNull String key, @NonNull Class<V> clsV) {
         try{
             String json = sp.getString(key, "");
             if(json==null){return null;}
@@ -163,19 +160,14 @@ public class SPUtils {
      * @param tag
      * @param datalist
      */
-    public  <T> boolean setList2(String tag, List<T> datalist, boolean isClean) {
+    public  <T> boolean setList2(@NonNull String tag, @NonNull List<T> datalist) {
         try{
             Gson gson = new Gson();
             //转换成json数据，再保存
             String strJson = gson.toJson(datalist);
-            if(isClean){
-                editor2.clear();
-            }else{
-                if (null == datalist || datalist.size() <= 0)
-                return false;
-                editor2.putString(tag, strJson);
-            }
-            editor2.commit();
+            if (null == datalist || datalist.size() <= 0) return false;
+            editor.putString(tag, strJson);
+            editor.apply();
             return true;
         }catch (Exception ex ){
             Log.i("保存pag异常信息>>>",ex.toString()+"");
@@ -188,11 +180,11 @@ public class SPUtils {
      * @param tag
      * @return
      */
-    public  <T>List<T> getList2(String tag,Class<T> cls) {
+    public  <T>List<T> getList2(@NonNull String tag,@NonNull Class<T> cls) {
         try{
             List<T> mList=new ArrayList<>();
             Gson mGson = new Gson();
-            String strJson = sp2.getString(tag, null);
+            String strJson = sp.getString(tag, null);
             JsonArray array = new JsonParser().parse(strJson).getAsJsonArray();
             for(final JsonElement elem : array){
                 mList.add(mGson.fromJson(elem, cls));
@@ -250,21 +242,6 @@ public class SPUtils {
         }
     }*/
 
-
-   /*
-   //次方法获取会抛java.lang.ClassCastException
-   com.google.gson.internal.LinkedTreeMap cannot be cast to XXXX.XXX.XX
-    public <T> List<T> getDataList(String tag) {
-        List<T> datalist=new ArrayList<T>();
-        String strJson = sp.getString(tag, null);
-        if (null == strJson) {
-            return datalist;
-        }
-        Gson gson = new Gson();
-        datalist = gson.fromJson(strJson, new TypeToken<List<T>>() {
-        }.getType());
-        return datalist;
-    }*/
     /**
      * 序列化对象
      *
@@ -273,7 +250,7 @@ public class SPUtils {
      * @throws IOException
      */
     @SuppressWarnings("unused")
-    public boolean setConfig(String key,Object obj){
+    public boolean setConfig(@NonNull String key,@NonNull Object obj){
         try{
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
@@ -283,7 +260,7 @@ public class SPUtils {
             objectOutputStream.close();
             byteArrayOutputStream.close();
             editor.putString(key, serStr);
-            editor.commit();
+            editor.apply();
             return true;
         }catch(IOException ex){
             ex.printStackTrace();
@@ -302,7 +279,7 @@ public class SPUtils {
      * @throws ClassNotFoundException
      */
     @SuppressWarnings("unused")
-    public  Object getConfig(String key) {
+    public  Object getConfig(@NonNull String key) {
         try{
             String string = sp.getString(key,null);
             String redStr = java.net.URLDecoder.decode(string, "UTF-8");
@@ -322,6 +299,32 @@ public class SPUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+
+    /**
+     * 移除指定数据
+     * @param key
+     * @return
+     */
+    public boolean remove(@NonNull String key){
+        if(StringUtils.isEmpty(key)){return false;}
+        editor.remove(key);
+        editor.commit();
+        return true;
+    }
+
+    /**
+     * 清楚所有SP保存的数据
+     * @param key
+     * @return
+     * @TODO 请谨慎使用
+     */
+    public boolean clean(@NonNull String key){
+        if(StringUtils.isEmpty(key)){return false;}
+        editor.clear();
+        editor.commit();
+        return true;
     }
 
 

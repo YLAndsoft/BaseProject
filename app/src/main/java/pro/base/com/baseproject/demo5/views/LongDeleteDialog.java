@@ -97,6 +97,8 @@ public class LongDeleteDialog extends Dialog {
         //如果用户自定了title和message
         if (messageStr1 != null) {
             message1.setText(messageStr1);
+        }else{
+            message1.setText("是否删除当前聊天信息，并且删除聊天记录？");
         }
     }
 

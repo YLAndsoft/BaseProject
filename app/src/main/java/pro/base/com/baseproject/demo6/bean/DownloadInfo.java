@@ -1,9 +1,6 @@
 package pro.base.com.baseproject.demo6.bean;
 
-import android.widget.ListView;
-import com.arialyy.aria.core.download.DownloadTask;
 import java.io.Serializable;
-import pro.base.com.baseproject.demo6.adpter.AriaAdapter;
 
 /**
  * Created by DN on 2018/3/10.
@@ -30,7 +27,7 @@ public class DownloadInfo implements Serializable{
 
     public DownloadInfo(){}
 
-    public DownloadInfo(AppSimpleView app,String apkUrl,int state,int position){
+    public DownloadInfo(AppSimpleView app, String apkUrl, int state, int position){
         this.state = state;
         this.apkUrl = apkUrl;
         this.app = app;

@@ -24,6 +24,7 @@ public class DemoActivity extends MenuFragmentActivity {
     private int[] tabResIds = { R.id.rl_menu_0, R.id.rl_menu_1,R.id.rl_menu_2, R.id.rl_menu_3 };
 
     private int flResId = R.id.fl_menu_container;
+
     private int[] imageNormals = {R.mipmap.ic_home_actionbar0,
             R.mipmap.ic_home_actionbar1,
             R.mipmap.ic_home_actionbar2,

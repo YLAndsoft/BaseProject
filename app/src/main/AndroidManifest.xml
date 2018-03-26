@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="pro.base.com.baseproject">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,6 +13,8 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+
+    <!--allowBackup="true" 用户可以对我们应用程序进行数据备份。-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,10 +23,9 @@
         android:supportsRtl="true"
         android:name="pro.base.com.baseproject.MyAppLication"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="pro.base.com.baseproject.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -42,27 +44,51 @@
 
 
         <activity android:name = ".demo1.fragment.DemoActivity"
+
+            android:exported="false"
             android:screenOrientation="portrait"/>
         <activity android:name = "pro.base.com.baseproject.demo2.DBTestActivity"
+            android:exported="false"
             android:screenOrientation="portrait"/>
         <activity android:name = "pro.base.com.baseproject.demo3.SVProgressHUDActivity"
+            android:exported="false"
             android:screenOrientation="portrait"/>
         <activity android:name = "pro.base.com.baseproject.demo4.LayerListActivity"
+            android:exported="false"
             android:screenOrientation="portrait"/>
         <activity android:name = "pro.base.com.baseproject.demo5.ui.ChatActivity"
+            android:exported="false"
             android:screenOrientation="portrait"/>
         <activity android:name = "pro.base.com.baseproject.demo5.ui.ChatInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity android:name = "pro.base.com.baseproject.demo6.AriaListActivity"
+            android:exported="false"
             android:screenOrientation="portrait"/>
         <activity android:name = "pro.base.com.baseproject.demo6.AriaActivity"
+            android:exported="false"
             android:screenOrientation="portrait"/>
         <activity android:name = "pro.base.com.baseproject.demo6.AppDetailsActivtiy"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity android:name = "pro.base.com.baseproject.demo6.AriaDownManagerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity android:name = "pro.base.com.baseproject.demo6.AriaSettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity android:name = "pro.base.com.baseproject.demo6.AriaRecyclerActvity"
+            android:exported="false"
             android:screenOrientation="portrait"/>
 
-        <receiver android:name="pro.base.com.baseproject.demo6.service.InstallReceiver">
+
+        <receiver android:name="pro.base.com.baseproject.demo6.service.InstallReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" /> <!--有新的应用被安装-->
                 <action android:name="android.intent.action.PACKAGE_REMOVED" /><!--有应用被卸载-->
                 <action android:name="android.intent.action.PACKAGE_REPLACED" /><!--有应用被替换-->
+
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>

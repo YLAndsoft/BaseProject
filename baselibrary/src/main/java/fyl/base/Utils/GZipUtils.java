@@ -121,6 +121,9 @@ public abstract class GZipUtils {
      * @throws Exception
      */
     public static void compress(String path) throws Exception {
+        if (path.contains("..")){
+            throw new Exception("unsecurity zipfile!");
+        }
         compress(path, true);
     }
 
@@ -133,6 +136,9 @@ public abstract class GZipUtils {
      * @throws Exception
      */
     public static void compress(String path, boolean delete) throws Exception {
+        if (path.contains("..")){
+            throw new Exception("unsecurity zipfile!");
+        }
         File file = new File(path);// 通过将给定路径名字符串转换为抽象路径名来创建一个新 File 实例。
         compress(file, delete);
     }

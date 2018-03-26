@@ -19,9 +19,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import fyl.base.Utils.SPUtils;
+import pro.base.com.baseproject.demo6.bean.DownloadInfo;
 import pro.base.com.baseproject.demo6.constant.DownloadConstant;
 import pro.base.com.baseproject.demo6.bean.AppSimpleView;
-import pro.base.com.baseproject.demo6.bean.DownloadInfo;
 
 /**
  * Created by DN on 2018/3/10.
@@ -198,7 +198,7 @@ public class AppManageUtils {
      * @param apkUrl
      * @return
      */
-    public static DownloadInfo getDownload(Context context,@NonNull String apkUrl){
+    public static DownloadInfo getDownload(Context context, @NonNull String apkUrl){
         DownloadInfo dInfo = null;
         try{
             Map<String, DownloadInfo> map = getMap(context);
@@ -262,9 +262,15 @@ public class AppManageUtils {
             ex.printStackTrace();
         }
         return false;
-
     }
 
+    /**
+     * 一键移除所有下载任务
+     * @return
+     */
+    public static boolean removeDownInfo(Context context){
+        return SPUtils.getInstance(context).remove(DownloadConstant.downloadKey);
+    }
 
     //3. 判断SDCard的文件大小不小于指定的
     public static boolean fileIsFull(@NonNull String path, double size) {

@@ -18,6 +18,6 @@ public interface DownloadObserver {
      * @param appInfo
      * @param progress
      */
-    public void execute(Context context,DownloadInfo appInfo, int progress);
+    public void execute(Context context, DownloadInfo appInfo, int progress);
 
 }

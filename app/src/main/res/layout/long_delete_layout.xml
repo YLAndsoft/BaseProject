@@ -29,7 +29,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="left"
-                android:text="是否删除当前聊天信息，并且删除聊天记录？"
                 android:layout_marginTop="10dp"
                 android:textColor="#666666"
                 android:textSize="14sp" />

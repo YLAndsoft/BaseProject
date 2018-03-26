@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp" >
+
+        <RelativeLayout
+            android:id="@+id/manager_rl_Info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ll_manager" >
+
+            <ImageView
+                android:id="@+id/manager_appIcon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/manager_appIcon"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/manager_appName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="下载的文件名称"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+                    <pro.base.com.baseproject.demo6.views.HorizontalProgressBarWithNumber
+                        android:id="@+id/manager_progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:max="100"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/manager_downSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0MB/0MB"
+                        android:textColor="#696969"
+                        android:layout_weight="1"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:id="@+id/manager_convertSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0mb/s"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:textColor="#696969"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_below="@+id/manager_appIcon" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/btn_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂停"
+                android:textSize="15sp"
+                android:padding="8dp"
+                android:gravity="center"
+                android:textColor="@color/system_bar_color"/>
+            <TextView
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/btn_stop"
+                android:layout_marginLeft="15dp"
+                android:text="删除"
+                android:padding="8dp"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:textColor="@color/system_bar_color"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -91,7 +91,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
      * @param msg
      */
     protected void showToast(String msg){
-        if(Constant.isShowToast){
+        if(Fyl.isShowToast){
             if(null!=getActivity()){
                 Toast.makeText(getActivity(),msg, Toast.LENGTH_SHORT).show();
             }
@@ -105,7 +105,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
      */
     public static final String TAG1 = "BaseActivity";
     protected void showLog(String msg){
-        if(Constant.isShowLog){
+        if(Fyl.isShowLog){
             Log.i(TAG1,msg);
         }
     }

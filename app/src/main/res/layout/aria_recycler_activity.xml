@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <include layout="@layout/top_layout"/>
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/aria_nestedScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/aria_top_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/default_icon"
+                android:scaleType="centerCrop"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/aria_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

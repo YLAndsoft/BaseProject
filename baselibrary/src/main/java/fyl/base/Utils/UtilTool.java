@@ -76,6 +76,11 @@ public class UtilTool {
         return null;
     }
 
+    /**
+     * 加密手机
+     * @param mobile
+     * @return 133****4444
+     */
     public static String isMobile(String mobile) {
         String str = "";
         if (isStrNull(mobile)) {

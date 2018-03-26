@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:id="@+id/zzzzzzzzzpoint_rl_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" >
+
+        <ImageView
+            android:id="@+id/zzzzzzzzzpoint_iv_app_icon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_icon" />
+
+        <TextView
+            android:id="@+id/zzzzzzzzzpoint_tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zzzzzzzzzpoint_iv_app_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:maxWidth="70dp"
+            android:singleLine="true"
+            android:text="天天夺宝"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zzzzzzzzzpoint_tv_app_name"
+            android:paddingBottom="8dp" >
+
+            <LinearLayout
+                android:id="@+id/zzzzzzzzzpoint_ll_app_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/zzzzzzzzzpoint_tv_app_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8.0M"
+                    android:textColor="#c8c8c8"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/zzzzzzzzzpoint_ll_app_size"
+                android:clickable="false" >
+                <ProgressBar
+                    android:id="@+id/zzzzzzzzzpoint_progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="22dp"
+                    android:clickable="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/download_bg" />
+                <TextView
+                    android:id="@+id/zzzzzzzzzpoint_btn_download"
+                    android:layout_width="50dp"
+                    android:layout_height="22dp"
+                    android:text="下载"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_selector"/>
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

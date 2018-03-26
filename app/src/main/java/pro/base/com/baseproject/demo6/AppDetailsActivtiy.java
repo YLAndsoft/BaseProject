@@ -252,7 +252,7 @@ public class AppDetailsActivtiy extends BaseActivity implements MyScrollView.OnS
                 details_tv_apptag1.setVisibility(View.GONE);
                 details_tv_apptag2.setVisibility(View.GONE);
             }
-            details_tv_appbrief.setText(app.getAppDescribe()+"");//应用说明
+            details_tv_appbrief.setText(app.getAppBrief()+"");//应用说明
             top_appdesc.setText(app.getAppBrief()+"");//顶部应用简介
 
             if (app.getAppImgOne() != null&&!app.getAppImgOne().equals("")) {

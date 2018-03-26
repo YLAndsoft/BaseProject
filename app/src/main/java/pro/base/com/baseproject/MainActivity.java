@@ -15,6 +15,7 @@ import pro.base.com.baseproject.demo3.SVProgressHUDActivity;
 import pro.base.com.baseproject.demo1.fragment.DemoActivity;
 import pro.base.com.baseproject.demo4.LayerListActivity;
 import pro.base.com.baseproject.demo6.AriaActivity;
+import pro.base.com.baseproject.demo6.AriaListActivity;
 
 public class MainActivity extends BaseActivity {
 
