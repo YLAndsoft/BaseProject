@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="system_bar_color">#3F51B5</color>
+    <color name="system_color">#3F51B5</color>
 
     <color name="background_tab_pressed">#00000000</color>
 

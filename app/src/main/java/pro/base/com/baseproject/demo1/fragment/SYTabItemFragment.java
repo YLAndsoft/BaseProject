@@ -230,6 +230,8 @@ public class SYTabItemFragment extends BaseLazyLoadFragment implements XRefreshV
         super.onDestroy();
         size=1;
         mHasLoadedOnce = false;
+        //结束轮播
+        banner.stopAutoPlay();
     }
 
     @Override
@@ -242,8 +244,6 @@ public class SYTabItemFragment extends BaseLazyLoadFragment implements XRefreshV
     @Override
     public void onResume() {
         super.onResume();
-        //结束轮播
-        banner.stopAutoPlay();
     }
 
     @Override

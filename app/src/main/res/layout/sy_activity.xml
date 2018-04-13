@@ -21,22 +21,39 @@
             android:text="首页"/>
 
     </RelativeLayout>
+
     <fyl.base.views.PagerSlidingTabStrip
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/pleasure_tabs"
         android:layout_width="fill_parent"
         android:layout_height="34.0dip"
-        android:background="@color/activity_bg_white"
-        android:textColor="@color/text_black_light"
+        android:background="@color/white"
+        android:textColor="@color/system_bar_color"
         android:textSize="16.0dip"
-        app:pstsDividerColor="@color/transparent"
+        app:pstsDividerColor="@color/textColor_actionsheet_title"
         app:pstsIndicatorColor="@color/system_bar_color"
-        app:pstsIndicatorHeight="2.0dip"
+        app:pstsIndicatorHeight="3.0dip"
+        app:pstsDividerPadding="0dp"
         app:pstsShouldExpand="true"
+        app:pstsUnderlineHeight ="34dp"
         app:pstsTabPaddingLeftRight="12.0dip"
         app:selectedTabTextColor="@color/system_bar_color"
         app:pstsUnderlineColor="@color/transparent"
+        android:layout_below="@+id/details_view"
         />
+
+    <!--
+            app:apstsIndicatorColor   滑动条的颜色
+            app:pstsUnderlineColor 滑动条所在的那个全宽线的颜色
+            app:pstsDividerColor  每个标签的分割线的颜色
+            app:pstsIndicatorHeight 滑动条的高度
+            app:pstsUnderlineHeight  滑动条所在的那个全宽线的高度
+            app:pstsDividerPadding  分割线底部和顶部的填充宽度
+            app:pstsTabPaddingLeftRight  每个标签左右填充宽度
+            app:pstsScrollOffset
+            app:pstsTabBackground  每个标签的背景，应该是一个StateListDrawable
+            app:pstsShouldExpand  如果设置为true，每个标签是相同的控件，均匀平分整个屏幕，默认是false
+            app:pstsTextAllCaps  如果为true，所有标签都是大写字母，默认为true-->
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_FindFragment_pager"
         android:layout_width="fill_parent"

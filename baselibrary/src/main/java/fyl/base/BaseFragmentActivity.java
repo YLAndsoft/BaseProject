@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -40,6 +41,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements V
     private boolean isSetActionBarColor = true;
     /** 当前Activity渲染的视图View **/
     protected View mContextView = null;
+    private int mResColor = Color.parseColor("#3F51B5");
     /** 日志输出标志 **/
     protected final String TAG = this.getClass().getSimpleName();
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +62,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements V
             steepStatusBar();
         }
         if (isSetActionBarColor) {
-            setActionBarColor();
+            setActionBarColor(mResColor);
         } ;
         setContentView(mContextView);
         if (!isAllowScreenRoate) {
@@ -216,12 +218,12 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements V
     {
         finish();
     }
-    private void setActionBarColor() {
+    private void setActionBarColor(int color) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             setTranslucentStatus(true);
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
-            tintManager.setStatusBarTintResource(R.color.system_bar_color);//通知栏所�?颜色
+            tintManager.setStatusBarTintResource(color);//通知栏所�?颜色
         }
     }
     /**
@@ -340,8 +342,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements V
         this.isAllowScreenRoate = isAllowScreenRoate;
     }
 
-    public void setSetActionBarColor(boolean isSetActionBarColor) {
+    public void setSetActionBarColor(boolean isSetActionBarColor,int color) {
         this.isSetActionBarColor = isSetActionBarColor;
+        this.mResColor = color;
     }
     /** View点击 **/
     public abstract void widgetClick(View v);

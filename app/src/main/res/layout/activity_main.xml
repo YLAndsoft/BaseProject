@@ -92,6 +92,19 @@
                 android:background="#7a4287"
                 android:textColor="#ffffff"
                 />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="基于IJKplayer 的多功能视频播放器"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="#7a4287"
+                android:textColor="#ffffff"
+                />
         </LinearLayout>
     </ScrollView>
 

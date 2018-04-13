@@ -7,8 +7,8 @@ package fyl.base;
 
 public class Fyl {
 
-    public static  boolean isShowToast = true;
-    public static  boolean isShowLog = true;
+    protected static  boolean isShowToast = true;
+    protected static  boolean isShowLog = true;
 
     private Fyl() {
         throw new UnsupportedOperationException("u can't instantiate me...");

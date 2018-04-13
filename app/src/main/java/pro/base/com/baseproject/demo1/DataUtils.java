@@ -73,7 +73,6 @@ public class DataUtils {
         images.add("http://pic48.nipic.com/file/20140912/7487939_224239519000_2.jpg");
         images.add("http://pic48.nipic.com/file/20140912/7487939_224002930000_2.jpg");
         images.add("http://pic48.nipic.com/file/20140912/7487939_224356073000_2.jpg");
-
         return images;
     }
     public static List<String> getImageTitle(){

@@ -21,9 +21,6 @@ public class ClassifyViewPagerAdapter extends FragmentPagerAdapter {
         this.mPagerTitles = titles;
         this.mData = lists;
     }
-
-
-
     @Override
     public CharSequence getPageTitle(int position) {
         return mPagerTitles.get(position);

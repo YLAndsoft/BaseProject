@@ -340,6 +340,7 @@ public class AppDetailsActivtiy extends BaseActivity implements MyScrollView.OnS
                 if (details_top_body != null && details_top_body.getVisibility()==View.VISIBLE) {
                     // 关闭
                     ViewAnimationUtils.goneViewByAlpha(details_top_body,1000);
+
                 }
             } else {
                 if (details_top_body != null && details_top_body.getVisibility()==View.GONE) {
