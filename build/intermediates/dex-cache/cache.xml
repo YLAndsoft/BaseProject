@@ -7,17 +7,8 @@
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="185ae6325cf374d9af4ec183c95e4a4e133a06ad">
+        sha1="e90199abc8ca9c7ce366bdb720e7d7b863998942">
         <dex dex="H:\AndroidStudioWorkSpace\BaseProject\app\build\intermediates\pre-dexed\debug\classes_5bc52c152304312280849574ff147a7f3ae83408.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\DN\.android\build-cache\da65eb30aab879017c3f5277a6f2ff354ab17dd7\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="ecc959ced49f75ecbcb6ede4d17e9ecc10fc4c9c">
-        <dex dex="H:\AndroidStudioWorkSpace\BaseProject\app\build\intermediates\pre-dexed\debug\classes_df083e87cda7e6914390cbe79e6af4ef87c8163a.jar" />
     </item>
 
 </items>

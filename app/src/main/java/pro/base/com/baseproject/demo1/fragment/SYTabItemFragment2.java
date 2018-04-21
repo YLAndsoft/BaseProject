@@ -1,5 +1,7 @@
 package pro.base.com.baseproject.demo1.fragment;
 
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import com.shizhefei.mvc.MVCCoolHelper;
 import com.shizhefei.mvc.MVCHelper;
@@ -27,6 +29,7 @@ public class SYTabItemFragment2 extends BaseLazyLoadFragment  {
     private boolean isPrepared;
     /** 是否已被加载过一次，第二次就不再去请求数据了 */
     private boolean mHasLoadedOnce;
+
     @Override
     public View bindView() {
         return null;

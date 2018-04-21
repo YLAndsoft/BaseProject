@@ -44,7 +44,7 @@ public class DemoActivity extends MenuFragmentActivity {
         setAllowFullScreen(true);
         setScreenRoate(false);
         setSteepStatusBar(false);
-        setSetActionBarColor(true);
+        setSetActionBarColor(true,R.color.system_color);
     }
 
     @Override

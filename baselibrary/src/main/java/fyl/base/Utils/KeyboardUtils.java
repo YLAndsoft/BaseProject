@@ -127,8 +127,7 @@ public class KeyboardUtils {
      * @param activity The activity.
      * @param listener The soft input changed listener.
      */
-    public static void registerSoftInputChangedListener(final Activity activity,
-                                                        final OnSoftInputChangedListener listener) {
+    public static void registerSoftInputChangedListener(final Activity activity,final OnSoftInputChangedListener listener) {
         final View contentView = activity.findViewById(android.R.id.content);
         sContentViewInvisibleHeightPre = getContentViewInvisibleHeight(activity);
         contentView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -199,7 +198,7 @@ public class KeyboardUtils {
             }
             return super.dispatchTouchEvent(ev);
         }
-        // Return whether touch the view.
+        // Return whether touch the view.判断点击是否是EditText区域
         private boolean isShouldHideKeyboard(View v, MotionEvent event) {
             if (v != null && (v instanceof EditText)) {
                 int[] l = {0, 0};
