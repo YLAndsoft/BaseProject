@@ -9,7 +9,7 @@
 Add it in your root build.gradle at the end of repositories:<br>
 ```java
  maven { url 'https://jitpack.io' }
- compile 'com.github.YLAndsoft:BaseProject:v1.2'
+ compile 'com.github.YLAndsoft:BaseProject:v1.3.5'
 ```
 
 1：说明：
