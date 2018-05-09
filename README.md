@@ -11,4 +11,4 @@ Add it in your root build.gradle at the end of repositories:<br>
  maven { url 'https://jitpack.io' }
  compile 'com.github.YLAndsoft:BaseProject:v1.3.5'
 ```
-[详细使用见WIKI](https://github.com/YLAndsoft/BaseProject/wiki)  
+## [详细使用见WIKI](https://github.com/YLAndsoft/BaseProject/wiki)  
