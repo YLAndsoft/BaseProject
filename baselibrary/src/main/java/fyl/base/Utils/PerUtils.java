@@ -271,7 +271,7 @@ public class PerUtils {
      * @param intent
      * @param requestCode
      */
-    private static void startForResult(Object object, Intent intent, int requestCode) {
+    public static void startForResult(Object object, Intent intent, int requestCode) {
         if (object instanceof Activity) {
             ((Activity) object).startActivityForResult(intent, requestCode);
         } else if (object instanceof android.support.v4.app.Fragment) {

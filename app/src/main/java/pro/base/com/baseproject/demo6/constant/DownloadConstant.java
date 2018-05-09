@@ -12,7 +12,6 @@ public class DownloadConstant {
      */
     public static final String downloadKey = "downloadInfo";
 
-
     /**
      * 初始状态
      */

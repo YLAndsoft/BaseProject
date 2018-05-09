@@ -21,7 +21,6 @@ import fyl.base.widget.SystemBarTintManager;
 /**
  * 说明：继承此activity，必须在继承者的布局文件父节点中添加属性：
  *  android:fitsSystemWindows="true"
- *  否则会出现布局显示不全，顶部会往上移动一点
  * Created by DN on 2017/7/22.
  */
 
@@ -169,8 +168,7 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
     }
     /**
      * [页面跳转]
-     *
-     * @param clz
+     * @param clz 跳转到目标的页面
      */
     public void startActivity(Class<?> clz) {
         startActivity(new Intent(BaseActivity.this,clz));
@@ -178,7 +176,6 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
 
     /**
      * [携带数据的页面跳转]
-     *
      * @param clz
      * @param bundle
      */
@@ -193,13 +190,11 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
 
     /**
      * [含有Bundle通过Class打开编辑界面]
-     *
      * @param cls
      * @param bundle
      * @param requestCode
      */
-    public void startActivityForResult(Class<?> cls, Bundle bundle,
-                                       int requestCode) {
+    public void startActivityForResult(Class<?> cls, Bundle bundle, int requestCode) {
         Intent intent = new Intent();
         intent.setClass(this, cls);
         if (bundle != null) {

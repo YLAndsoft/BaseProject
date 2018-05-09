@@ -5,14 +5,53 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_show"
-        android:layout_width="wrap_content"
+    <include layout="@layout/top_layout"/>
+<!--
+    <android.support.v7.widget.AppCompatCheckedTextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
-    <Button
-        android:id="@+id/btn_get"
-        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="25sp"
+        android:checked="true"
+        android:clickable="true"
+        android:checkMark="?android:attr/listChoiceIndicatorSingle"
+        android:text="内容涉黄"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试"/>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查询"/>
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="增加"/>
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改"/>
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:nestedScrollingEnabled="false"/>
 </LinearLayout>

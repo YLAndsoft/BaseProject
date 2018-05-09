@@ -2,6 +2,7 @@ package pro.base.com.baseproject.demo1.fragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
 import android.view.View;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -33,6 +34,7 @@ public class SYFragment extends BaseFragment {
 
     @Override
     public View bindView() {
+        //View inflate = LayoutInflater.from(mContext).inflate(R.layout.test, null);
         return null;
     }
 

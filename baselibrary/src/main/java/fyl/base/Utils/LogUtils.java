@@ -35,7 +35,7 @@ public class LogUtils {
 
     /** 日志输出时的TAG */
 
-    private static String mTag = "BaiDu";
+    private static String mTag = "FYL";
 
     /** 是否允许输出log */
 

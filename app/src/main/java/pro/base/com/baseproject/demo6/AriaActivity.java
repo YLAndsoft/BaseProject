@@ -3,6 +3,7 @@ package pro.base.com.baseproject.demo6;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
@@ -34,11 +35,17 @@ public class AriaActivity extends BaseActivity {
         setSetActionBarColor(true, R.color.system_bar_color);//设置状态栏主题颜色true
     }
     @Override
-    public View bindView() {  return null; }
+    public View bindView() {
+        return null;
+    }
     @Override
-    public int bindLayout() {   return R.layout.aria_activity; }
+    public int bindLayout() {
+        return R.layout.aria_activity;
+    }
     @Override
-    public void initView(View view) { x.view().inject(this);}
+    public void initView(View view) {
+        x.view().inject(this);
+    }
     @Override
     public void setListener() {
         aria_list.setOnClickListener(this);
@@ -48,6 +55,7 @@ public class AriaActivity extends BaseActivity {
 
     @Override
     public void doBusiness(Context mContext) {
+        //这里操作逻辑等..
 
     }
 
@@ -68,4 +76,6 @@ public class AriaActivity extends BaseActivity {
                 break;
         }
     }
+
+
 }

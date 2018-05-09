@@ -10,6 +10,7 @@ import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 import fyl.base.BaseActivity;
+import pro.base.com.baseproject.demo2.DBTestActivity;
 import pro.base.com.baseproject.demo2.User;
 import pro.base.com.baseproject.demo3.SVProgressHUDActivity;
 import pro.base.com.baseproject.demo1.fragment.DemoActivity;
@@ -36,7 +37,6 @@ public class MainActivity extends BaseActivity {
     private TextView mText7;
     private String[] demoName = Constant.DEMO_NAME;
 
-    private User user;
     @Override
     public void initParms(Bundle parms) {
         //此属性设置与状态栏相关
@@ -87,7 +87,7 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(mContext,DemoActivity.class));
                 break;
             case R.id.textView2:
-               // startActivity(new Intent(mContext,DBTestActivity.class));
+                startActivity(new Intent(mContext,DBTestActivity.class));
                 break;
             case R.id.textView3:
                 startActivity(new Intent(mContext,SVProgressHUDActivity.class));

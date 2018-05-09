@@ -103,7 +103,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
      * [打印日志]
      * @param msg
      */
-    public static final String TAG1 = "BaseActivity";
+    public static final String TAG1 = "BaseFragment";
     protected void showLog(String msg){
         if(Fyl.isShowLog){
             Log.i(TAG1,msg);

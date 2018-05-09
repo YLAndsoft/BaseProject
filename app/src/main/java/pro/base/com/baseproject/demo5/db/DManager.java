@@ -15,17 +15,17 @@ import pro.base.com.baseproject.demo5.entity.ChatMessage;
  * Created by DN on 2018/2/10.
  */
 
-public class DBManager {
+public class DManager {
     private DbOpenHelper DBhelper;
-    private static DBManager cDao=null;
+    private static DManager cDao=null;
 
-    public DBManager(Context context){
+    public DManager(Context context){
         this.DBhelper = DbOpenHelper.getInstance(context);
     }
 
-    public static DBManager init(Context context){
+    public static DManager init(Context context){
         if(cDao==null){
-            cDao = new DBManager(context);
+            cDao = new DManager(context);
         }
         return cDao;
     }

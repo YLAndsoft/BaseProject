@@ -31,7 +31,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="数据库(维护中...)"
+                android:text="数据库(xUtils3.0数据库简单使用)"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:textSize="18sp"
