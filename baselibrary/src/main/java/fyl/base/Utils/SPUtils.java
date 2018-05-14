@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * haredPreferences的一个工具类，调用setParam就能保存String, Integer, Boolean, Float, Long类型的参数
+ * SharedPreferences的一个工具类，调用setParam就能保存String, Integer, Boolean, Float, Long类型的参数
  * 同样调用getParam就能获取到保存在手机里面的数据
  * Created by DN on 2017/12/19.
  */

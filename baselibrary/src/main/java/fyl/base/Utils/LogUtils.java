@@ -3,6 +3,7 @@ package fyl.base.Utils;
 import android.util.Log;
 
 /**
+ * 日志相关工具类
  * Created by DN on 2017/10/16.
  */
 

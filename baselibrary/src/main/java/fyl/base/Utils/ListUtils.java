@@ -1,5 +1,9 @@
 package fyl.base.Utils;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 /**
  * Created by DN on 2018/2/27.
  */
@@ -30,15 +34,15 @@ public class ListUtils {
      * @param tList
      * @return
      */
-   /* public static List<ChatMessage> upsideDownLong(List<ChatMessage> tList){
+    /*public static <T>List<T> upsideDownLong(List<T> tList){
         if(tList==null||tList.size()<=0){
             return null;
         }
-        Comparator<ChatMessage> itemComparator = new Comparator<ChatMessage>() {
-            public int compare(ChatMessage info1, ChatMessage info2){
+        Comparator<T> itemComparator = new Comparator<T>() {
+            public int compare(T info1, T info2){
                 Long l1 = info1.getSend_time();
                 Long l2 = info2.getSend_time();
-                return l2.compareTo(l1);
+                return l1.compareTo(l2);
             }
         };
         Collections.sort(tList, itemComparator);

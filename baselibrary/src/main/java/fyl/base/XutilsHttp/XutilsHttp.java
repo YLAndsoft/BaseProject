@@ -1,24 +1,16 @@
 package fyl.base.XutilsHttp;
 
-import android.util.ArrayMap;
-
-
 import org.xutils.common.Callback;
 import org.xutils.ex.HttpException;
 import org.xutils.http.HttpMethod;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
-
 import fyl.base.Utils.GZipUtils;
-import fyl.base.Utils.GsonUtils;
-
 
 /**
  * Created by DN on 2017/12/8.

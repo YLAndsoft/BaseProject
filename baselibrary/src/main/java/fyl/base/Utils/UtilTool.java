@@ -7,6 +7,7 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 /**
+ * 内存相关工具类
  * Created by DN on 2017/9/6.
  */
 

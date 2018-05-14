@@ -7,6 +7,7 @@ import org.xutils.x;
 import java.io.File;
 import java.util.List;
 import fyl.base.Utils.LogUtils;
+import fyl.base.Utils.StringUtils;
 
 /**
  * 数据库使用辅助类
@@ -30,8 +31,8 @@ public class DBManageHelper {
      * @param  listener 更新数据库监听
      */
     public static void initDB(@NonNull String dbName, @NonNull String dbPath, DbManager.DbUpgradeListener listener){
-        DBNAME  = dbName;
-        DBPATH = dbPath;
+        if(!StringUtils.isEmpty(dbName))DBNAME  = dbName;
+        if(!StringUtils.isEmpty(dbName))DBPATH = dbPath;
         DbManager.DaoConfig daoConfig = new DbManager.DaoConfig()
                 .setDbName(DBNAME)//设置数据库名称
                 // 不设置dbDir时, 默认存储在app的私有目录.
