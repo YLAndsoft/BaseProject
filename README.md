@@ -13,4 +13,10 @@ Add it in your root build.gradle at the end of repositories:<br>
 ```
 ## [详细使用见WIKI](https://github.com/YLAndsoft/BaseProject/wiki)  
 
-### [模板使用下载地址](https://github.com/YLAndsoft/TestProject)
+### [模板使用下载地址](https://github.com/YLAndsoft/TestProject) 
+
+```java 
+ 有疑问的同伴可以QQ好友或者邮箱留言我
+ QQ:347933430
+ 邮箱：347933430@qq.com
+```
