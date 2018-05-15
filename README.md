@@ -9,6 +9,14 @@
 Add it in your root build.gradle at the end of repositories:<br>
 ```java
  maven { url 'https://jitpack.io' }
- compile 'com.github.YLAndsoft:BaseProject:v1.3.5'
+ compile 'com.github.YLAndsoft:BaseProject:v1.3.6'
 ```
-## [详细使用见WIKI](https://github.com/YLAndsoft/BaseProject/wiki)  
+## [详细使用见WIKI](https://github.com/YLAndsoft/BaseProject/wiki)  
+
+### [模板使用下载地址](https://github.com/YLAndsoft/TestProject) 
+
+```java 
+ 有疑问或者建议的同伴可以QQ好友或者邮箱留言我
+ QQ:347933430
+ 邮箱：347933430@qq.com
+```
