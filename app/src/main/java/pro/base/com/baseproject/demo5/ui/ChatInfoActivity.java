@@ -34,7 +34,6 @@ public class ChatInfoActivity extends BaseActivity {
     private ChatInfoAdapter chatInfoAdapter;
     private List<ChatMessage> chatInfo;
     private ChatRefeshReceiver refeshReceiver;
-    private Context mContext;
     @Override
     public void initParms(Bundle parms) {
         setAllowFullScreen(true);

@@ -17,6 +17,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 import fyl.base.constant.Constant;
 import fyl.base.widget.SystemBarTintManager;
+import pro.base.com.baselibrary.R;
 
 /**
  * 说明：继承此activity，必须在继承者的布局文件父节点中添加属性：
@@ -39,7 +40,7 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
     protected final String TAG = this.getClass().getSimpleName();
     /**上文*/
     protected Context mContext;
-    private int mResColor = Color.parseColor("#3F51B5");
+    private int mResColor = R.color.colorPrimary;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

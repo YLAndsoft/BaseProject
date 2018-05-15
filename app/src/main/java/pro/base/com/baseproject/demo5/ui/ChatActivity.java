@@ -29,7 +29,11 @@ public class ChatActivity extends BaseFragmentActivity {
     private Class<?> clz;
     @Override
     public void initParms(Bundle parms) {
-
+        //此属性设置与状态栏相关
+        setAllowFullScreen(true);//是否允许全屏
+        setScreenRoate(false);//是否允许屏幕旋转
+        setSteepStatusBar(false);//是否设置沉浸状态栏
+        //setSetActionBarColor(true,R.color.system_bar_color);//设置状态栏主题颜色
     }
 
     @Override
