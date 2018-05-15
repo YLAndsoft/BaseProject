@@ -6,7 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -115,10 +114,9 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseRe
         try{
             if(null!=list&&list.size()>0){
                 list.remove(position);
-                notifyDataSetChanged();
+                //notifyDataSetChanged();
             }
         }catch (Exception ex){
-            Toast.makeText(context,"删除失败！",Toast.LENGTH_SHORT).show();
         }
     }
     /**
@@ -138,15 +136,5 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseRe
     }
 
 
-
-    public void notifyDataChanged( List<T> users, boolean isRefresh) {
-       if (isRefresh) {
-            list.clear();
-           list=users;
-        }else{
-           list.addAll(users);
-       }
-        notifyDataSetChanged();
-    }
 
 }

@@ -63,7 +63,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements V
         }
         if (isSetActionBarColor) {
             setActionBarColor(mResColor);
-        } ;
+        }
         setContentView(mContextView);
         if (!isAllowScreenRoate) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -231,7 +231,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements V
      */
     private void steepStatusBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            // 透明状�?�栏
+            // 透明状态栏
             getWindow().addFlags(
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             // 透明导航�?
@@ -352,12 +352,10 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements V
     @Override
     public void onResume() {
         super.onResume();
-        //MobclickAgent.onResume(this); //统计时长
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        //MobclickAgent.onPause(this);//统计时长
     }
 }

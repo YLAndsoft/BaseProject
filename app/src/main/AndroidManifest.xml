@@ -81,11 +81,12 @@
         <activity android:name = "pro.base.com.baseproject.demo6.AriaRecyclerActvity"
             android:exported="false"
             android:screenOrientation="portrait"/>
-
-        <activity android:name = "pro.base.com.baseproject.demo7.VideoActivity"
+        <activity android:name = "pro.base.com.baseproject.demo7.BaseRecyclerActivity"
             android:exported="false"
-            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait"/>
+
+
+
         <!--<activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"

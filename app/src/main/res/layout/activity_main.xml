@@ -66,21 +66,9 @@
                 android:background="#28657b"
                 android:textColor="#ffffff"
                 />
+
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="单向聊天(已嵌入demo1)"
-                android:layout_gravity="center"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:padding="10dp"
-                android:background="#47b6b2"
-                android:textColor="#ffffff"
-                />
-            <TextView
-                android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Aria下载模拟"
@@ -93,10 +81,10 @@
                 android:textColor="#ffffff"
                 />
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="基于IJKplayer 的多功能视频播放器"
+                android:text="BaseRecycler使用"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:textSize="18sp"

@@ -2,12 +2,18 @@ package fyl.base;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.bumptech.glide.Glide;
+
+import fyl.base.Utils.StringUtils;
+import pro.base.com.baselibrary.R;
+
 
 /**
  * BaseRecyclerView的封装
@@ -53,7 +59,7 @@ public class BaseRecyclerHolder extends RecyclerView.ViewHolder {
     }
 
     /**
-     * 设置字符串,图片
+     * 设置字符串
      */
     public BaseRecyclerHolder setText(int viewId,String text){
         View view = getView(viewId);
@@ -119,7 +125,7 @@ public class BaseRecyclerHolder extends RecyclerView.ViewHolder {
     }
 
     /**
-     * 设置图片资源
+     * 设置图片
      */
     public BaseRecyclerHolder setImageResource(int viewId,int drawableId){
         ImageView iv = getView(viewId);
@@ -128,7 +134,7 @@ public class BaseRecyclerHolder extends RecyclerView.ViewHolder {
     }
 
     /**
-     * 设置图片Bitmap
+     * 设置图片
      */
     public BaseRecyclerHolder setImageBitmap(int viewId, Bitmap bitmap){
         ImageView iv = getView(viewId);
@@ -137,20 +143,12 @@ public class BaseRecyclerHolder extends RecyclerView.ViewHolder {
     }
 
     /**
-     * 设置图片地址，无尺寸
+     * 设置图片
      */
     public BaseRecyclerHolder setImageByUrl(int viewId,String url){
-        Glide.with(context).load(url).into((ImageView) getView(viewId));
-        return this;
-    }
-    /**
-     * 设置图片地址，有尺寸
-     */
-    public BaseRecyclerHolder setImageByUrl(int viewId,String url,int x,int y){
-        Glide.with(context)
-                .load(url)
-                .override(x,y)
-                .into((ImageView) getView(viewId));
+        if(!StringUtils.isEmpty(url)){
+            Glide.with(context).load(url).error(ContextCompat.getDrawable(context, R.drawable.default_error)).into((ImageView) getView(viewId));
+        }
         return this;
     }
 

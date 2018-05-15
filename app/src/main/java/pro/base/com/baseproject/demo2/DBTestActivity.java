@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fyl.base.BaseActivity;
+import fyl.base.BaseRecyclerAdapter;
+import fyl.base.BaseRecyclerHolder;
 import pro.base.com.baseproject.R;
 
 /**
@@ -109,7 +111,7 @@ public class DBTestActivity extends BaseActivity {
                     showToast("添加失败！");
                     return;
                 }
-                adapter.notifyDataChanged(apps2, true);
+                adapter.updateAll();
                 break;
             case R.id.btn_delete:
                 List<App> appst = DBManageHelper.queryAll(App.class);//查询所有
@@ -119,7 +121,7 @@ public class DBTestActivity extends BaseActivity {
                 }
                 DBManageHelper.deleteById(App.class,(appst.size() - 1));
                 List<App> appList = DBManageHelper.queryAll(App.class);//查询所有
-                adapter.notifyDataChanged(appList, true);
+                adapter.updateAll();
                 break;
             case R.id.btn_update:
                 List<App> appsss = DBManageHelper.queryAll(App.class);
@@ -134,7 +136,7 @@ public class DBTestActivity extends BaseActivity {
                     showToast("修改失败！");
                     return;
                 }
-                adapter.notifyDataChanged(update, true);
+                adapter.updateAll();
                 break;
 
         }

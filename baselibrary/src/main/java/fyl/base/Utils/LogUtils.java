@@ -2,6 +2,8 @@ package fyl.base.Utils;
 
 import android.util.Log;
 
+import fyl.base.Fyl;
+
 /**
  * 日志相关工具类
  * Created by DN on 2017/10/16.
@@ -71,8 +73,7 @@ public class LogUtils {
     public static void d(String msg) {
 
         if (mDebuggable >= LEVEL_DEBUG) {
-
-            Log.d(mTag, msg);
+                Log.d(mTag, msg);
 
         }
 
@@ -85,8 +86,7 @@ public class LogUtils {
     public static void i(String msg) {
 
         if (mDebuggable >= LEVEL_INFO) {
-
-            Log.i(mTag, msg);
+                Log.i(mTag, msg);
 
         }
 
@@ -99,8 +99,7 @@ public class LogUtils {
     public static void w(String msg) {
 
         if (mDebuggable >= LEVEL_WARN) {
-
-            Log.w(mTag, msg);
+                Log.w(mTag, msg);
 
         }
 
@@ -113,9 +112,7 @@ public class LogUtils {
     public static void w(Throwable tr) {
 
         if (mDebuggable >= LEVEL_WARN) {
-
-            Log.w(mTag, "", tr);
-
+                Log.w(mTag, "", tr);
         }
 
     }
@@ -127,9 +124,7 @@ public class LogUtils {
     public static void w(String msg, Throwable tr) {
 
         if (mDebuggable >= LEVEL_WARN && null != msg) {
-
-            Log.w(mTag, msg, tr);
-
+                Log.w(mTag, msg, tr);
         }
 
     }
@@ -141,9 +136,9 @@ public class LogUtils {
     public static void e(String msg) {
 
         if (mDebuggable >= LEVEL_ERROR) {
-
-            Log.e(mTag, msg);
-
+            if(Fyl.isShowLog){
+                Log.e(mTag, msg);
+            }
         }
 
     }
@@ -155,8 +150,9 @@ public class LogUtils {
     public static void e(Throwable tr) {
 
         if (mDebuggable >= LEVEL_ERROR) {
-
-            Log.e(mTag, "", tr);
+            if(Fyl.isShowLog){
+                Log.e(mTag, "", tr);
+            }
 
         }
 
@@ -168,8 +164,9 @@ public class LogUtils {
     public static void e(String msg, Throwable tr) {
 
         if (mDebuggable >= LEVEL_ERROR && null != msg) {
-
-            Log.e(mTag, msg, tr);
+            if(Fyl.isShowLog){
+                Log.e(mTag, msg, tr);
+            }
 
         }
 

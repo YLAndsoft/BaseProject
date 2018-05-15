@@ -3,15 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\DN\.gradle\caches\modules-2\files-2.1\com.arialyy.aria\aria-annotations\3.3.14\979ea3873d08b02222a902cfb32da1a15593e437\aria-annotations-3.3.14.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="979ea3873d08b02222a902cfb32da1a15593e437">
-        <dex dex="H:\AndroidStudioWorkSpace\BaseProject\app\build\intermediates\transforms\dex\debug\folders\1000\10\aria-annotations-3.3.14_06aa47f9ac95360c38cfd42fd67ffed12eadf22d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="H:\AndroidStudioWorkSpace\BaseProject\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -21,29 +12,11 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\DN\.android\build-cache\425bc5426758499f4ea7fbd386609d89023d3905\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="052a8ad121bc9ffc7c88ec0894ce0e99ff5bfea0">
-        <dex dex="H:\AndroidStudioWorkSpace\BaseProject\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3a6c1a90c382162944ea892637b9df367833d60b\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="H:\AndroidStudioWorkSpace\BaseProject\baselibrary\build\intermediates\bundles\default\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="84e3b4dee4efce16571a1a69b65673918b37c7a1">
-        <dex dex="H:\AndroidStudioWorkSpace\BaseProject\app\build\intermediates\pre-dexed\debug\classes_5bc52c152304312280849574ff147a7f3ae83408.jar" />
-    </item>
-    <item
-        is-multidex="true"
         jar="H:\AndroidStudioWorkSpace\BaseProject\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="1da408e6c073be9d7df6f37ee66e12cab9f3dfcd">
+        sha1="22fd81437be06362572978573f662cf39aab47eb">
         <dex dex="H:\AndroidStudioWorkSpace\BaseProject\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_d79443c704ca3e1235c9d3c05ecca9014b478ca8\classes.dex" />
     </item>
 

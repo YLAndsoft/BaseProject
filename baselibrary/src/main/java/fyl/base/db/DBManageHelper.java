@@ -63,10 +63,8 @@ public class DBManageHelper {
             //db.save(app);//保存成功之后【不会】对user的主键进行赋值绑定
             //db.saveOrUpdate(user);//保存成功之后【会】对user的主键进行赋值绑定
             //db.saveBindingId(user);//保存成功之后【会】对user的主键进行赋值绑定,并返回保存是否成功
-            boolean b = db.saveBindingId(data);//对user的主键进行赋值绑定,并返回保存是否成功
-            if(b){
-                lists = queryAll(clazz);
-            }
+            if(null!=data)db.saveBindingId(data);//对user的主键进行赋值绑定,并返回保存是否成功
+            lists = queryAll(clazz);
         } catch (DbException e) {
             e.printStackTrace();
             return null;
@@ -85,7 +83,7 @@ public class DBManageHelper {
     public static <T>List<T> insert(@NonNull List<T> list,@NonNull Class<T> clazz){
         List<T> lists ;//查询所有
         try {
-            db.saveBindingId(list);
+            if(null!=list||list.size()>0)db.saveBindingId(list);
             lists = queryAll(clazz);
         } catch (DbException e) {
             e.printStackTrace();
@@ -165,7 +163,7 @@ public class DBManageHelper {
      * @param appUrl appUrl
      * @return
      */
-    public static <T>T queryClazzApkUrl(Class<T> clazz,String appUrl){
+    public static <T>T queryClazzApkUrl(Class<T> clazz,@NonNull String appUrl){
         try {
             //MyApplication.db.selector(clazz).where("id","=",appId).and("id","<",4).findAll();
             List<T> appid = db.selector(clazz).where("APPAPKURL", "=", appUrl).findAll();
@@ -187,7 +185,7 @@ public class DBManageHelper {
      * @param key appUrl
      * @return
      */
-    public static <T>List<T> queryClazzKeyValue(Class<T> clazz,String key,String values){
+    public static <T>List<T> queryClazzKeyValue(Class<T> clazz,@NonNull String key,@NonNull String values){
         try {
             //MyApplication.db.selector(clazz).where("id","=",appId).and("id","<",4).findAll();
             List<T> apps= db.selector(clazz).where(key, "=", values).findAll();
@@ -259,18 +257,19 @@ public class DBManageHelper {
      * @return 返回所有对象
      */
     public static <T>List<T> deleteEntity(Class<T> clazz,T t){
+
         List<T> tList=null;
         try {
             List<T> list = queryAll(clazz);
             if(null!=list&&list.size()>0){
-                db.delete(t);
+                if(null!=t)db.delete(t);
                 tList = queryAll(clazz);
             }
         } catch (DbException e) {
             e.printStackTrace();
             return null;
         }catch (Exception ex){
-            LogUtils.e("第position个对象,deleteById()异常:"+ex);
+            LogUtils.e("deleteEntity()异常:"+ex);
             return null;
         }
         return tList;
@@ -285,7 +284,7 @@ public class DBManageHelper {
     public static <T>List<T> deleteById(List<T> list,Class<T> clazz){
         List<T> tList;
         try {
-            db.delete(list);
+            if(null!=list&&list.size()>0)db.delete(list);
             tList = queryAll(clazz);
         } catch (DbException e) {
             e.printStackTrace();
@@ -309,7 +308,7 @@ public class DBManageHelper {
             //db.replace(user);
             //db.update(user);
             //db.update(user,"email");//指定只对email列进行更新
-            db.update(data);
+            if(null!=data)db.update(data);
             ts = queryAll(clazz);
         } catch (DbException e) {
             e.printStackTrace();
@@ -332,13 +331,13 @@ public class DBManageHelper {
     public static <T>List<T> updateColumn(T data,String column,Class<T> clazz){
         List<T> ts;
         try {
-            db.update(data,column);
+            if(null!=data)db.update(data,column);
             ts = queryAll(clazz);
         } catch (DbException e) {
             e.printStackTrace();
             return null;
         }catch (Exception ex){
-            LogUtils.e("修改单个对象update()异常:"+ex);
+            LogUtils.e("updateColumn()异常:"+ex);
             return null;
         }
         return ts;
