@@ -25,7 +25,7 @@ import pro.base.com.baselibrary.R;
  * Created by DN on 2017/7/22.
  */
 
-public abstract class BaseActivity extends Activity implements View.OnClickListener{
+public abstract class BaseActivity <T> extends Activity implements View.OnClickListener{
     /** 是否沉浸状态栏**/
     private boolean isSetStatusBar = true;
     /** 是否允许全屏 **/

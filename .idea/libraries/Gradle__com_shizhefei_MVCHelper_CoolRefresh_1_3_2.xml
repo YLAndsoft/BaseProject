@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.shizhefei:MVCHelper-CoolRefresh-1.3.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/4da65cf0054d8ad6229b194e3318cdfa2fbcf214/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/4da65cf0054d8ad6229b194e3318cdfa2fbcf214/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.shizhefei/MVCHelper-CoolRefresh/1.3.2/8a1faea12133c366e2c21f6b6285c93cfbb45871/MVCHelper-CoolRefresh-1.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -84,6 +84,9 @@
         <activity android:name = "pro.base.com.baseproject.demo7.BaseRecyclerActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>
+        <activity android:name = "pro.base.com.baseproject.demo7.BaseRecyclerActivityTest"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
 
 
 

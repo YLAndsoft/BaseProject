@@ -16,6 +16,7 @@ import pro.base.com.baseproject.demo1.fragment.DemoActivity;
 import pro.base.com.baseproject.demo4.LayerListActivity;
 import pro.base.com.baseproject.demo6.AriaActivity;
 import pro.base.com.baseproject.demo7.BaseRecyclerActivity;
+import pro.base.com.baseproject.demo7.BaseRecyclerActivityTest;
 
 public class MainActivity extends BaseActivity {
 
@@ -31,6 +32,8 @@ public class MainActivity extends BaseActivity {
     private TextView mText5;
     @ViewInject(value = R.id.textView6)
     private TextView mText6;
+    @ViewInject(value = R.id.textView7)
+    private TextView mText7;
     private String[] demoName = Constant.DEMO_NAME;
 
     @Override
@@ -66,6 +69,8 @@ public class MainActivity extends BaseActivity {
         mText4.setOnClickListener(this);
         mText5.setOnClickListener(this);
         mText6.setOnClickListener(this);
+        mText7.setOnClickListener(this);
+
 
     }
 
@@ -95,6 +100,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.textView6:
                 startActivity(new Intent(mContext,BaseRecyclerActivity.class));
+                break;
+            case R.id.textView7:
+                startActivity(new Intent(mContext,BaseRecyclerActivityTest.class));
                 break;
 
         }
