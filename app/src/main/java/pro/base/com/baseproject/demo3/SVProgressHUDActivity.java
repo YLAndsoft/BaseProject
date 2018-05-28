@@ -1,14 +1,14 @@
 package pro.base.com.baseproject.demo3;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import fyl.base.BaseActivity;
+import fyl.base.base.BaseActivity;
 import fyl.base.widget.SVP;
 import pro.base.com.baseproject.R;
 
@@ -32,7 +32,7 @@ public class SVProgressHUDActivity extends BaseActivity {
 
 
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         setAllowFullScreen(true);
         setScreenRoate(false);
         setSteepStatusBar(false);
@@ -55,7 +55,7 @@ public class SVProgressHUDActivity extends BaseActivity {
     }
 
     @Override
-    public void setListener() {
+    public void initListener() {
         text1.setOnClickListener(this);
         text2.setOnClickListener(this);
         text3.setOnClickListener(this);

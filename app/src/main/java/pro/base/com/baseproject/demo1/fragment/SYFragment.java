@@ -2,13 +2,12 @@ package pro.base.com.baseproject.demo1.fragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.View;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 import java.util.ArrayList;
 import java.util.List;
-import fyl.base.BaseFragment;
+import fyl.base.base.BaseFragment;
 import fyl.base.views.PagerSlidingTabStrip;
 import pro.base.com.baseproject.Constant;
 import pro.base.com.baseproject.R;
@@ -25,6 +24,7 @@ public class SYFragment extends BaseFragment {
     private PagerSlidingTabStrip pleasure_tabs;
     @ViewInject(value = R.id.vp_FindFragment_pager)
     private ViewPager mViewPage;
+
     private List<Fragment> fragments = new ArrayList<>();
     private ClassifyViewPagerAdapter classViewPagerAdapter;
     private SYTabItemFragment sytFragment1;

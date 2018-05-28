@@ -1,8 +1,7 @@
 package pro.base.com.baseproject.demo6;
 
 import android.content.Context;
-import android.graphics.Typeface;
-import android.os.Bundle;
+import android.content.Intent;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,17 +12,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.arialyy.aria.core.Aria;
-import com.arialyy.aria.core.common.RequestEnum;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import java.io.File;
-
-import fyl.base.BaseActivity;
+import fyl.base.base.BaseActivity;
 import fyl.base.Utils.StringUtils;
 import pro.base.com.baseproject.R;
-import pro.base.com.baseproject.demo6.utils.AppManageUtils;
 
 /**
  * Created by DN on 2018/3/22.
@@ -52,7 +47,7 @@ public class AriaSettingActivity extends BaseActivity {
 
 
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         //此属性设置与状态栏相关
         setAllowFullScreen(true);//是否允许全屏true
         setScreenRoate(false);//是否允许屏幕旋转false
@@ -72,7 +67,7 @@ public class AriaSettingActivity extends BaseActivity {
         x.view().inject(this);
     }
     @Override
-    public void setListener() {
+    public void initListener() {
         setting_task_commit.setOnClickListener(this);
         setting_speed_commit.setOnClickListener(this);
         setting_request_commit.setOnClickListener(this);

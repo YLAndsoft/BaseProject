@@ -2,7 +2,7 @@ package pro.base.com.baseproject.demo1.fragment;
 
 import android.view.View;
 
-import fyl.base.BaseFragment;
+import fyl.base.base.BaseFragment;
 import pro.base.com.baseproject.R;
 
 /**

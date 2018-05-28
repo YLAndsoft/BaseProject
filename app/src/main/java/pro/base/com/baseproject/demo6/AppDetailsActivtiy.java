@@ -1,8 +1,8 @@
 package pro.base.com.baseproject.demo6;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Rect;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,7 +19,7 @@ import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 import java.util.HashMap;
 import java.util.Map;
-import fyl.base.BaseActivity;
+import fyl.base.base.BaseActivity;
 import fyl.base.Utils.UtilTool;
 import fyl.base.Utils.ViewAnimationUtils;
 import fyl.base.XutilsHttp.XutilsHttp;
@@ -114,7 +114,7 @@ public class AppDetailsActivtiy extends BaseActivity implements MyScrollView.OnS
 
 
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         //此属性设置与状态栏相关
         setAllowFullScreen(true);//是否允许全屏true
         setScreenRoate(false);//是否允许屏幕旋转false
@@ -134,7 +134,7 @@ public class AppDetailsActivtiy extends BaseActivity implements MyScrollView.OnS
         x.view().inject(this);
     }
     @Override
-    public void setListener() {
+    public void initListener() {
         details_top_download.setOnClickListener(this);
         details_tv_download.setOnClickListener(this);
         details_iv_apppic1.setOnClickListener(this);

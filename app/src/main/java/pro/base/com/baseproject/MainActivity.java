@@ -2,14 +2,13 @@ package pro.base.com.baseproject;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import fyl.base.BaseActivity;
+import fyl.base.base.BaseActivity;
 import pro.base.com.baseproject.demo2.DBTestActivity;
 import pro.base.com.baseproject.demo3.SVProgressHUDActivity;
 import pro.base.com.baseproject.demo1.fragment.DemoActivity;
@@ -37,7 +36,7 @@ public class MainActivity extends BaseActivity {
     private String[] demoName = Constant.DEMO_NAME;
 
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         //此属性设置与状态栏相关
         setAllowFullScreen(true);//是否允许全屏
         setScreenRoate(false);//是否允许屏幕旋转
@@ -62,7 +61,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    public void setListener() {
+    public void initListener() {
         mText1.setOnClickListener(this);//绑定监听事件
         mText2.setOnClickListener(this);
         mText3.setOnClickListener(this);
@@ -76,7 +75,13 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void doBusiness(Context mContext) {
+String ss = "222";
+        ss.split("\\\\;");
+        ss.split("\\\\=");
+        ss.split("\\\\:");
+        ss.split(":");
 
+        ss.split("\\|");
 
     }
 

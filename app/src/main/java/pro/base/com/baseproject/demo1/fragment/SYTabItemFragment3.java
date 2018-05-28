@@ -2,7 +2,7 @@ package pro.base.com.baseproject.demo1.fragment;
 
 import android.view.View;
 import org.xutils.x;
-import fyl.base.BaseLazyLoadFragment;
+import fyl.base.base.BaseLazyLoadFragment;
 import pro.base.com.baseproject.R;
 
 /**此fragment已使用可见加载

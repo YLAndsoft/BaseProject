@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import fyl.base.BaseFragmentActivity;
+import fyl.base.base.BaseFragmentActivity;
 import fyl.base.Utils.LogUtils;
 import fyl.base.Utils.SPUtils;
 import pro.base.com.baseproject.Constant;
@@ -33,7 +33,7 @@ public class ChatActivity extends BaseFragmentActivity {
         setAllowFullScreen(true);//是否允许全屏
         setScreenRoate(false);//是否允许屏幕旋转
         setSteepStatusBar(false);//是否设置沉浸状态栏
-        //setSetActionBarColor(true,R.color.system_bar_color);//设置状态栏主题颜色
+        setSetActionBarColor(true,R.color.system_bar_color);//设置状态栏主题颜色
     }
 
     @Override

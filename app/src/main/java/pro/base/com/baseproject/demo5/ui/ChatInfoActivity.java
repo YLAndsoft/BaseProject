@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -12,7 +11,7 @@ import android.widget.TextView;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 import java.util.List;
-import fyl.base.BaseActivity;
+import fyl.base.base.BaseActivity;
 import pro.base.com.baseproject.Constant;
 import pro.base.com.baseproject.MyAppLication;
 import pro.base.com.baseproject.R;
@@ -35,7 +34,7 @@ public class ChatInfoActivity extends BaseActivity {
     private List<ChatMessage> chatInfo;
     private ChatRefeshReceiver refeshReceiver;
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         setAllowFullScreen(true);
         setScreenRoate(false);
         setSteepStatusBar(false);
@@ -63,7 +62,7 @@ public class ChatInfoActivity extends BaseActivity {
     }
 
     @Override
-    public void setListener() {
+    public void initListener() {
         chat_info_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

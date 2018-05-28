@@ -1,8 +1,7 @@
 package pro.base.com.baseproject.demo6;
 
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -16,7 +15,7 @@ import com.arialyy.aria.core.inf.IEntity;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 import java.util.List;
-import fyl.base.BaseActivity;
+import fyl.base.base.BaseActivity;
 import pro.base.com.baseproject.R;
 import pro.base.com.baseproject.demo5.views.LongDeleteDialog;
 import pro.base.com.baseproject.demo6.adpter.AriaManagerAdapter;
@@ -44,7 +43,7 @@ public class AriaDownManagerActivity extends BaseActivity implements OnManagerLi
 
     private AriaManagerAdapter adapter;
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         //此属性设置与状态栏相关
         setAllowFullScreen(true);//是否允许全屏true
         setScreenRoate(false);//是否允许屏幕旋转false
@@ -65,7 +64,7 @@ public class AriaDownManagerActivity extends BaseActivity implements OnManagerLi
         Aria.download(mContext).register();
     }
     @Override
-    public void setListener() {
+    public void initListener() {
         stop.setOnClickListener(this);
         delete.setOnClickListener(this);
         resume.setOnClickListener(this);

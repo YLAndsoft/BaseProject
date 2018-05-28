@@ -1,11 +1,11 @@
 package pro.base.com.baseproject;
 
-import android.app.Application;
-
 import org.xutils.DbManager;
 import org.xutils.x;
 
+import fyl.base.base.BaseApplication;
 import fyl.base.Fyl;
+import fyl.base.db.DBManageHelper;
 import pro.base.com.baseproject.demo5.db.DManager;
 import pro.base.com.baseproject.demo6.utils.AppManageUtils;
 
@@ -13,7 +13,7 @@ import pro.base.com.baseproject.demo6.utils.AppManageUtils;
  * Created by DN on 2018/1/17.
  */
 
-public class MyAppLication extends Application{
+public class MyAppLication extends BaseApplication{
     public static DManager ddbManager;
     private DbManager.DaoConfig daoConfig;
     public static DbManager db;
@@ -31,7 +31,14 @@ public class MyAppLication extends Application{
         initDB();
     }
 
-    private void initDB(){
+    @Override
+    public void initDB() {
+        //DBManageHelper.initDB("_APP.db","",null);
+
+        initDBs();
+    }
+
+    private void initDBs(){
         daoConfig = new DbManager.DaoConfig()
                 .setDbName("_APP.db")//设置数据库名称
                 // 不设置dbDir时, 默认存储在app的私有目录.

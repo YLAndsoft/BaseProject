@@ -1,11 +1,11 @@
 package pro.base.com.baseproject.demo1.activity;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
-import fyl.base.BaseActivity;
+import fyl.base.base.BaseActivity;
 import pro.base.com.baseproject.R;
 
 /**
@@ -15,7 +15,7 @@ import pro.base.com.baseproject.R;
 public class TestBaseActivity extends BaseActivity {
     private TextView test1,test2,test3;
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         setAllowFullScreen(true);
         setScreenRoate(false);
         setSteepStatusBar(false);
@@ -40,7 +40,7 @@ public class TestBaseActivity extends BaseActivity {
     }
 
     @Override
-    public void setListener() {
+    public void initListener() {
         test1.setOnClickListener(this);
         test2.setOnClickListener(this);
         test3.setOnClickListener(this);

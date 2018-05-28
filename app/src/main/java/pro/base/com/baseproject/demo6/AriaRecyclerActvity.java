@@ -1,10 +1,9 @@
 package pro.base.com.baseproject.demo6;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
 import android.os.Environment;
 import android.support.v4.widget.NestedScrollView;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
@@ -28,7 +27,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import fyl.base.BaseActivity;
+import fyl.base.base.BaseActivity;
 import fyl.base.XutilsHttp.XutilsHttp;
 import pro.base.com.baseproject.R;
 import pro.base.com.baseproject.demo6.adpter.AriaRecylcerAdapter;
@@ -57,7 +56,7 @@ public class AriaRecyclerActvity extends BaseActivity implements DownloadOnClick
     private LinearLayoutManager llManager;
     private int viewType = 1;
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         //此属性设置与状态栏相关
         setAllowFullScreen(true);//是否允许全屏true
         setScreenRoate(false);//是否允许屏幕旋转false
@@ -79,7 +78,7 @@ public class AriaRecyclerActvity extends BaseActivity implements DownloadOnClick
     }
 
     @Override
-    public void setListener() {
+    public void initListener() {
 
     }
 

@@ -2,9 +2,11 @@ package pro.base.com.baseproject.demo7;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+
 import java.util.List;
-import fyl.base.BaseRecyclerActivity;
-import fyl.base.BaseRecyclerHolder;
+import fyl.base.base.BaseRecyclerActivity;
+import fyl.base.base.BaseRecyclerHolder;
 import pro.base.com.baseproject.R;
 import pro.base.com.baseproject.demo1.DataUtils;
 import pro.base.com.baseproject.demo1.entity.User;
@@ -19,14 +21,33 @@ public class BaseRecyclerActivityTest extends BaseRecyclerActivity {
     }
 
 
+    /**
+     * 获取数据
+     * @return
+     */
     @Override
-    public List getData() { //获取数据
+    public List getData() {
         List<User> data = DataUtils.getData(1, mContext);
         return data;
     }
 
+    /**
+     * 其他逻辑业务操作
+     * @param view
+     */
+    @Override
+    public void doBusines(View view) {
+        //view.findViewById(R.id.base_recycler);
+    }
 
 
+    /**
+     * 设置适配器数据
+     * @param recyclerView
+     * @param holder
+     * @param item
+     * @param position
+     */
     @Override
     public void converts(final RecyclerView recyclerView, BaseRecyclerHolder holder, Object item, final int position) {
         User user = (User) item;
@@ -46,6 +67,8 @@ public class BaseRecyclerActivityTest extends BaseRecyclerActivity {
                 }
             }
         });
+        //其他点击事件和BaseRecyclerAdapter点击事件一样
+
     }
 
 }

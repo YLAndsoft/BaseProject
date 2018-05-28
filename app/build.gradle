@@ -40,5 +40,6 @@ dependencies {
     compile 'com.youth.banner:banner:1.4.10'
     compile 'com.arialyy.aria:aria-core:3.3.14'
     annotationProcessor 'com.arialyy.aria:aria-compiler:3.3.14'
+
     compile project(':baselibrary')
 }

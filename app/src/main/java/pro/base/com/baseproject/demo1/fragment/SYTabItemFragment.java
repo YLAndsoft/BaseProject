@@ -17,7 +17,7 @@ import org.xutils.x;
 import java.util.ArrayList;
 import java.util.List;
 
-import fyl.base.BaseLazyLoadFragment;
+import fyl.base.base.BaseLazyLoadFragment;
 import fyl.base.views.MyListView;
 import pro.base.com.baseproject.Constant;
 import pro.base.com.baseproject.R;

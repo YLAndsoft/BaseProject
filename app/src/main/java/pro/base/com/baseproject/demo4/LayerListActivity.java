@@ -1,8 +1,8 @@
 package pro.base.com.baseproject.demo4;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import fyl.base.BaseActivity;
+import fyl.base.base.BaseActivity;
 import pro.base.com.baseproject.R;
 
 /**
@@ -49,7 +49,7 @@ public class LayerListActivity extends BaseActivity {
     LoadInfo d3= new LoadInfo(Contants.D_INIT,0);
     LoadInfo d4= new LoadInfo(Contants.D_INIT,0);
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         setAllowFullScreen(true);
         setScreenRoate(false);
         setSteepStatusBar(false);
@@ -72,7 +72,7 @@ public class LayerListActivity extends BaseActivity {
     }
 
     @Override
-    public void setListener() {
+    public void initListener() {
         download_txt.setOnClickListener(this);
         download_txt1.setOnClickListener(this);
         download_txt2.setOnClickListener(this);

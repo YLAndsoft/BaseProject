@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import fyl.base.MenuFragmentActivity;
+import fyl.base.base.MenuFragmentActivity;
 import pro.base.com.baseproject.R;
 
 /**
@@ -67,8 +67,8 @@ public class DemoActivity extends MenuFragmentActivity {
         imgBtn = new ImageView[imgIds.length];
         txtBtn = new TextView[txtIds.length];
         for (int i = 0; i < imgIds.length; i++) {
-            imgBtn[i] = findViewById(imgIds[i]);
-            txtBtn[i] =findViewById(txtIds[i]);
+            imgBtn[i] = (ImageView) findViewById(imgIds[i]);
+            txtBtn[i] = (TextView) findViewById(txtIds[i]);
         }
         super.initTab(tabResIds);
         //首次展现加载的fragment

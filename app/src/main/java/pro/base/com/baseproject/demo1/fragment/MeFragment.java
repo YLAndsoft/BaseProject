@@ -7,7 +7,7 @@ import android.widget.TextView;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import fyl.base.BaseFragment;
+import fyl.base.base.BaseFragment;
 import pro.base.com.baseproject.R;
 import pro.base.com.baseproject.demo5.ui.ChatInfoActivity;
 

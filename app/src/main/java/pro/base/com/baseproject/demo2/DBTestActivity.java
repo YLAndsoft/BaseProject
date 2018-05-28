@@ -1,7 +1,7 @@
 package pro.base.com.baseproject.demo2;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
@@ -14,9 +14,9 @@ import org.xutils.x;
 import java.util.ArrayList;
 import java.util.List;
 
-import fyl.base.BaseActivity;
-import fyl.base.BaseRecyclerAdapter;
-import fyl.base.BaseRecyclerHolder;
+import fyl.base.base.BaseActivity;
+import fyl.base.base.BaseRecyclerAdapter;
+import fyl.base.base.BaseRecyclerHolder;
 import pro.base.com.baseproject.R;
 
 /**
@@ -37,7 +37,7 @@ public class DBTestActivity extends BaseActivity {
     BaseRecyclerAdapter<App> adapter;
 
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         //此属性设置与状态栏相关
         setAllowFullScreen(true);//是否允许全屏
         setScreenRoate(false);//是否允许屏幕旋转
@@ -61,7 +61,7 @@ public class DBTestActivity extends BaseActivity {
     }
 
     @Override
-    public void setListener() {
+    public void initListener() {
         btn_select.setOnClickListener(this);
         btn_add.setOnClickListener(this);
         btn_delete.setOnClickListener(this);

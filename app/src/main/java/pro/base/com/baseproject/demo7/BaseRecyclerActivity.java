@@ -1,7 +1,7 @@
 package pro.base.com.baseproject.demo7;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -11,9 +11,9 @@ import org.xutils.x;
 
 import java.util.List;
 
-import fyl.base.BaseActivity;
-import fyl.base.BaseRecyclerAdapter;
-import fyl.base.BaseRecyclerHolder;
+import fyl.base.base.BaseActivity;
+import fyl.base.base.BaseRecyclerAdapter;
+import fyl.base.base.BaseRecyclerHolder;
 import pro.base.com.baseproject.R;
 import pro.base.com.baseproject.demo1.DataUtils;
 import pro.base.com.baseproject.demo1.entity.User;
@@ -26,7 +26,7 @@ public class BaseRecyclerActivity extends BaseActivity {
     @ViewInject(value = R.id.base_recycler)
     RecyclerView base_recycler;
     @Override
-    public void initParms(Bundle parms) {
+    public void initParms(Intent parms) {
         //此属性设置与状态栏相关
         setAllowFullScreen(true);//是否允许全屏
         setScreenRoate(false);//是否允许屏幕旋转
@@ -50,7 +50,7 @@ public class BaseRecyclerActivity extends BaseActivity {
     }
 
     @Override
-    public void setListener() {
+    public void initListener() {
 
     }
 

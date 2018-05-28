@@ -1,7 +1,5 @@
 package pro.base.com.baseproject.demo1.fragment;
 
-import android.view.GestureDetector;
-import android.view.MotionEvent;
 import android.view.View;
 import com.shizhefei.mvc.MVCCoolHelper;
 import com.shizhefei.mvc.MVCHelper;
@@ -9,7 +7,7 @@ import com.shizhefei.view.coolrefreshview.CoolRefreshView;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 import java.util.List;
-import fyl.base.BaseLazyLoadFragment;
+import fyl.base.base.BaseLazyLoadFragment;
 import pro.base.com.baseproject.R;
 import pro.base.com.baseproject.demo1.UserDataSource;
 import pro.base.com.baseproject.demo1.adpter.UserAdapter;
