@@ -2,27 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/white"
+    android:orientation="vertical" >
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/system_bar_color">
-
+        android:layout_height="50dip"
+        android:background="@color/maintab_topbar_bg_color"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="18sp"
+            android:text="每日精选"
+            android:textSize="17sp"
             android:layout_centerInParent="true"
-            android:textColor="@color/white"
-            android:text="榜单"/>
+            />
 
     </RelativeLayout>
-    <TextView
+    <pro.base.com.baseproject.demo1.ad.views.MyLoadScrollView
+        android:id="@+id/scrollview_hot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        android:text="这是榜单页面"/>
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <pro.base.com.baseproject.demo1.ad.views.MyListView
+                android:id="@+id/lv_hotspots"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:nestedScrollingEnabled="false"
+                android:listSelector="#00000000"
+                android:scrollbars="none"
+                android:divider="@null"
+                />
+        </LinearLayout>
+    </pro.base.com.baseproject.demo1.ad.views.MyLoadScrollView>
+
 </LinearLayout>

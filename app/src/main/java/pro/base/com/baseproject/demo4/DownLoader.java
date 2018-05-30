@@ -16,7 +16,6 @@ public class DownLoader {
     private List<DownObserver> appObservers = new ArrayList<>();
     private int progress = 0;
 
-
     public DownLoader(Context context) {
         this.context = context;
     }

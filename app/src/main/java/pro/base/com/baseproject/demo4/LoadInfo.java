@@ -24,7 +24,7 @@ public class LoadInfo {
 
     List<DownObserver>  dObservers = new ArrayList<>();
 
-    //添加一个监听器
+        //添加一个监听器
     public synchronized void addAppObserver(DownObserver appObserver) {
         dObservers.add(appObserver);
     }

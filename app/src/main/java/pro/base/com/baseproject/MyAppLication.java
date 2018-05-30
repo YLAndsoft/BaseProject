@@ -34,7 +34,6 @@ public class MyAppLication extends BaseApplication{
     @Override
     public void initDB() {
         //DBManageHelper.initDB("_APP.db","",null);
-
         initDBs();
     }
 
